@@ -1,9 +1,9 @@
 .nav{
-    padding: 40px;
+    padding: 30px;
     color: black;
     background-color: '#008080';
     font-size: 25px; 
-    font-family:'cursive';
+    font-family:'Times New Roman', Times, serif;
 }
 .nav2{
     display: none;

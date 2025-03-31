@@ -4,8 +4,6 @@ import axios from 'axios'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import '../Pages/Login.css'
-import { FaUser } from "react-icons/fa";
-import { RiLockPasswordFill } from "react-icons/ri";
 import Navbars from '../Compoents/Navbars';
 import { ToastContainer,toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
@@ -49,38 +47,39 @@ const Login = () => {
     }
   return (
     <>
-    <Navbars/>
+   
+   
    <div className='nrml'>
-    <Form className='frm' style={{border:'2px solid white',height:'360px'}}>
+   <Navbars/>
+    <Form >
     <h1>LOGIN</h1>
     <div className='wrap'>
       <Form.Label  style={{color:'red'}}>{error.username}</Form.Label>
-      <div className='icon'> < FaUser/></div>
       <Form.Control type="text" placeholder="Username" name='username' onChange={handleChange} />
     </div>
     <div className='wrap2'>
       <Form.Label style={{color:'red'}}>{error.password}</Form.Label>
-      <div className='icon2'> < RiLockPasswordFill/></div>
       <Form.Control type="password" placeholder="Password"  name='password' onChange={handleChange} style={{marginTop:'30px'}}/>
     </div>
     <Button variant="primary" type="submit" onClick={handleSubmit}>LOGIN</Button>
   </Form>
   </div>
+ 
                          {/* responsive view */}
+ <Navbars/>
   <div className='mobile'>
-    <Form style={{border:'2px solid white',height:'360px'}}>
+  
+    <Form style={{height:'380px'}}>
     <h1>LOGIN</h1>
     <div className='wrap'>
       <Form.Label  style={{color:'red'}}>{error.username}</Form.Label>
-      <div className='icon'> < FaUser/></div>
       <Form.Control type="text" placeholder="Username" name='username' onChange={handleChange} />
     </div>
     <div className='wrap2'>
       <Form.Label style={{color:'red'}}>{error.password}</Form.Label>
-      <div className='icon2'> < RiLockPasswordFill/></div>
       <Form.Control type="password" placeholder="Password"  name='password' onChange={handleChange} style={{marginTop:'30px'}}/>
     </div>
-    <Button id='btn' variant="primary" type="submit" onClick={handleSubmit}>LOGIN</Button>
+    <Button id='btn' variant="primary" type="submit" onClick={handleSubmit}  style={{marginTop:'20px'}}>LOGIN</Button>
   </Form>
   </div>
   <ToastContainer/>

@@ -6,11 +6,6 @@ import './Login.css'
 import Navbars from '../Compoents/Navbars';
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom';
-import { FaUserCircle } from "react-icons/fa";
-import { FaUser } from "react-icons/fa";
-import { FaPhoneSquareAlt } from "react-icons/fa";
-import { IoMail } from "react-icons/io5";
-import { RiLockPasswordFill } from "react-icons/ri";
 import { ToastContainer,toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
@@ -70,43 +65,80 @@ const Signup = () => {
     }
   return (
     <>
+   
+    <div className='nrml'>
     <Navbars/>
-    <Form className='frm' style={{border:'2px solid white',height:'480px',marginTop:'40px'}}>
+    <Form style={{height:'480px',marginTop:'80px'}}>
     <h1>SIGNUP </h1>
 
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.name}</Form.Label>
-      <div className='icon'><FaUserCircle /></div>
       <Form.Control type="text" placeholder="Name" name="name"  onChange={handleChange} required/>
     </div>{<br></br>}
 
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.phone}</Form.Label>
-      <div className='icon'><FaPhoneSquareAlt /></div>
       <Form.Control type="tel" placeholder="Phone"  name="phone" onChange={handleChange} required/>
     </div>{<br></br>}
 
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.email}</Form.Label>
-      <div className='icon'><IoMail /></div>
       <Form.Control type="mail" placeholder="Email" name="email" onChange={handleChange} required/>
     </div>{<br></br>}
 
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.username}</Form.Label>
-      <div className='icon'><FaUser/></div>
       <Form.Control type="text" placeholder="Username"  name="username" onChange={handleChange} required/>
     </div>{<br></br>}
 
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.password}</Form.Label>
-      <div className='icon'><RiLockPasswordFill /></div>
       <Form.Control type="password" placeholder="Password"  name="password"onChange={handleChange} required/>
     </div>{<br></br>}
     <Button id='btn' variant="primary" onClick={handleSubmit}>SIGNUP</Button>
 
   </Form>
   <ToastContainer/>
+  </div>
+
+                      {/* responsive view */}
+
+   <Navbars/>
+  <div className='mobile'>
+   
+    <Form style={{height:'480px'}}>
+    <h1>SIGNUP </h1>
+
+    <div className='wrap'>
+      <Form.Label style={{color:'red'}}>{error.name}</Form.Label>
+      <Form.Control type="text" placeholder="Name" name="name"  onChange={handleChange}  style={{marginTop:'-30px'}}required/>
+    </div>{<br></br>}
+
+    <div className='wrap'>
+      <Form.Label style={{color:'red'}}>{error.phone}</Form.Label>
+      <Form.Control type="tel" placeholder="Phone"  name="phone" onChange={handleChange} style={{marginTop:'-10px'}} required/>
+    </div>{<br></br>}
+
+    <div className='wrap'>
+      <Form.Label style={{color:'red'}}>{error.email}</Form.Label>
+      <Form.Control type="mail" placeholder="Email" name="email" onChange={handleChange}  style={{marginTop:'-10px'}}required/>
+    </div>{<br></br>}
+
+    <div className='wrap'>
+      <Form.Label style={{color:'red'}}>{error.username}</Form.Label>
+      <Form.Control type="text" placeholder="Username"  name="username" onChange={handleChange} style={{marginTop:'-10px'}} required/>
+    </div>{<br></br>}
+
+    <div className='wrap'>
+      <Form.Label style={{color:'red'}}>{error.password}</Form.Label>
+      <Form.Control type="password" placeholder="Password"  name="password"onChange={handleChange} style={{marginTop:'-10px'}} required/>
+    </div>{<br></br>}
+    <Button id='btn' variant="primary" onClick={handleSubmit} style={{marginTop:'-10px'}}>SIGNUP</Button>
+
+  </Form>
+  <ToastContainer/>
+  </div>
+  
   </>
   )
 }

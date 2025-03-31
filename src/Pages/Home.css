@@ -1,0 +1,19 @@
+.home{
+    background-image: url('home.jpeg');
+    height: 750px;
+    width: 100%;
+    background-size: cover;
+}
+@media only screen and (max-width:600px){
+    .home2{
+    display: block;
+    background-image: url('home.jpeg');
+    height: 650px;
+    width: 100%;
+    background-size:100%;
+    background-repeat: no-repeat;
+    }
+    .home{
+        display: none;
+    }
+}
