@@ -1,0 +1,27 @@
+.nav{
+    padding: 40px;
+    color: black;
+    background-color: '#008080';
+    font-size: 25px; 
+    font-family:'cursive';
+}
+.nav2{
+    display: none;
+}
+@media only screen and (max-width:600px){
+.nav2{
+    color:black;
+    font-size: 25px;
+    display: flex;
+    padding: 0 1rem;
+    &.active {
+        color: #000000;
+    }
+}
+.nav{
+    display: none
+}
+}
+
+
+       
