@@ -1,6 +1,5 @@
 .row{
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;   
@@ -17,17 +16,15 @@ a:hover{
 }
 .img{
     background-image: url('C:\TastyHug\src\Pages\weback.jpeg');
-    height: 750px;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 @media only screen and (max-width:600px){
     .img{
-        height: 950px;
-      
+        height: 800px;
     }
     .row{
-        justify-content: center;
+        flex-direction: column;
     }
     .row2{
         display: flex;
