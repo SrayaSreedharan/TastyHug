@@ -7,6 +7,7 @@ import '../Pages/Login.css'
 import Navbars from '../Compoents/Navbars';
 import { ToastContainer,toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const[login,setLogin]=useState({})
@@ -15,7 +16,7 @@ const Login = () => {
       setLogin({...login,[e.target.name]:e.target.value})
       console.log(login)
     }
-    // const navigate=useNavigate()
+    const navigate=useNavigate();
     const validate=()=>{
     const errorMessage={}
       
@@ -39,7 +40,7 @@ const Login = () => {
         console.log(response)
         toast.success('successfully')
         localStorage.setItem("loginId",response.data.loginId)
-       
+        navigate('/weoffer')
       }).catch((error)=>{
         console.log(error)
         toast.error(error.response?.data?.message || "login failed ")
