@@ -5,10 +5,14 @@ import Login from './Pages/Login';
 import Signup from './Pages/Signup';
 import Home from './Pages/Home';
 import Weoffer from './Pages/Weoffer';
+import Steamedfood from './Pages/Steamedfood';
+import Arabicfood from './Pages/Arabicfood';
+import Riceitem from './Pages/Riceitem';
+import Italianfood from './Pages/Italianfood';
+import Seafood from './Pages/Seafood';
+import Vegitem from './Pages/Vegitem';
 
 function App() {
-  
-
   return (
     <>
      <BrowserRouter>
@@ -17,11 +21,15 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/signup" element={<Signup/>}/> 
       <Route path="/weoffer" element={<Weoffer/>}/> 
+      <Route path="/steam" element={<Steamedfood/>}/> 
+      <Route path="/Arabic" element={<Arabicfood/>}/> 
+      <Route path="/rice" element={<Riceitem/>}/> 
+      <Route path="/italian" element={<Italianfood/>}/> 
+      <Route path="/seafood" element={<Seafood/>}/> 
+      <Route path="/veg" element={<Vegitem/>}/> 
     </Routes>
     </BrowserRouter>
-      
     </>
   )
 }
-
 export default App
