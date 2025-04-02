@@ -13,7 +13,7 @@ import Navbarwe from '../Compoents/Navbarwe';
 const Weoffer = () => {
   return (
     <>
-    <div className='img ' style={{height:'750px'}}>
+    <div className='img '>
     <Navbarwe/>
     <div className='row'>
     <Card style={{ width: '14rem',height:'200px'}}>
