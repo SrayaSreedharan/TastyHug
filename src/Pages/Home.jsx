@@ -2,6 +2,7 @@ import React from 'react'
 import Navbars from '../Compoents/Navbars';
 import '../Pages/Home.css'
 
+
 const Home = () => {
   return (
     <>
@@ -11,5 +12,4 @@ const Home = () => {
     </>
   )
 }
-
 export default Home

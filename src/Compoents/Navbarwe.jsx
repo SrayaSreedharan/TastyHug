@@ -24,16 +24,17 @@ const Navbarwe = () => {
             <Nav.Link href="/weoffer" style={{padding:'20px'}}>WEOFFERED</Nav.Link>
             <Nav.Link href="/order" style={{padding:'20px'}}>ORDERS</Nav.Link>
             <Nav.Link href="/contact" style={{padding:'20px'}}>CONTACT US</Nav.Link>
-          </Nav>
+            </Nav>
           <Form className="">
             <Form.Control
               type="search"
               placeholder="Search"
-              className="me-2"
-              aria-label="Search" 
+  
+  
             />
             <Button variant="outline-success" style={{width:'90px',backgroundColor:'black'}}>LOGOUT</Button>
           </Form>
+         
         </Navbar.Collapse>
       </Container>
     </Navbar>

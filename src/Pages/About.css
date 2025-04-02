@@ -1,0 +1,21 @@
+.about{
+    background-image: url('C:\TastyHug\src\Pages\paym.jpg');
+    height: 750px;
+    background-repeat: no-repeat;
+    background-size: 100%  100%;
+}
+.abt{
+    margin-left: 330px;
+}
+.aboutus{
+    width: 600px;
+}
+@media only screen and (max-width:600px){
+    .abt{
+        margin-left:-1px;
+        margin-top: 220px;
+    }
+    .aboutus{
+        width: 340px;
+    }
+}

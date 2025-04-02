@@ -28,7 +28,7 @@ const Payment = () => {
       <div><Form.Label></Form.Label>
       <Form.Control type="number" placeholder="CARD NUMBER"  name='number'/></div>{<br></br>}
       <div><Form.Label></Form.Label>
-      <Form.Control type="number" placeholder="EXPIRY DATE"  name='number'/></div>{<br></br>}
+      <Form.Control type="date" placeholder="EXPIRY DATE"  name='number'/></div>{<br></br>}
     <Button variant="primary" type="submit" style={{backgroundColor:'black',width:'150px'}} onClick={handleSubmit}>PAY</Button>
   </Form>
   </div>
