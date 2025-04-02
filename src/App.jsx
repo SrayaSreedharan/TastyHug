@@ -13,6 +13,8 @@ import Seafood from './Pages/Seafood';
 import Vegitem from './Pages/Vegitem';
 import Payment from './Pages/Payment';
 import Order from './Pages/Order';
+import About from './Pages/About';
+import Contactus from './Pages/Contactus';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
       <Route path="/veg" element={<Vegitem/>}/> 
       <Route path="/pay" element={<Payment/>}/>
       <Route path="/order" element={<Order/>}/> 
+      <Route path="/about" element={<About/>}/> 
+      <Route path="/contact" element={<Contactus/>}/> 
     </Routes>
     </BrowserRouter>
     </>

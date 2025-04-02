@@ -20,8 +20,10 @@ const Navbarwe = () => {
             navbarScroll
           >
             <Nav.Link href="/">HOME</Nav.Link>
+            <Nav.Link href="/about" style={{padding:'20px'}}>ABOUT</Nav.Link>
             <Nav.Link href="/weoffer" style={{padding:'20px'}}>WEOFFERED</Nav.Link>
-            <Nav.Link href="/weoffer" style={{padding:'20px'}}>ORDERS</Nav.Link>
+            <Nav.Link href="/order" style={{padding:'20px'}}>ORDERS</Nav.Link>
+            <Nav.Link href="/contact" style={{padding:'20px'}}>CONTACT US</Nav.Link>
           </Nav>
           <Form className="">
             <Form.Control
