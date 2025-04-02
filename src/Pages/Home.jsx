@@ -5,9 +5,9 @@ import '../Pages/Home.css'
 const Home = () => {
   return (
     <>
-     <Navbars/>
-    <div className='home'></div>
-    <div className='home2'></div>
+    <div className='home'>
+    <Navbars/>
+    </div>
     </>
   )
 }

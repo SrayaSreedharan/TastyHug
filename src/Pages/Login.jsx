@@ -48,8 +48,6 @@ const Login = () => {
     }
   return (
     <>
-   
-   
    <div className='nrml'>
    <Navbars/>
     <Form >
@@ -64,28 +62,9 @@ const Login = () => {
     </div>
     <Button variant="primary" type="submit" onClick={handleSubmit}>LOGIN</Button>
   </Form>
-  </div>
- 
-                         {/* responsive view */}
- <Navbars/>
-  <div className='mobile'>
-  
-    <Form style={{height:'380px'}}>
-    <h1>LOGIN</h1>
-    <div className='wrap'>
-      <Form.Label  style={{color:'red'}}>{error.username}</Form.Label>
-      <Form.Control type="text" placeholder="Username" name='username' onChange={handleChange} />
-    </div>
-    <div className='wrap2'>
-      <Form.Label style={{color:'red'}}>{error.password}</Form.Label>
-      <Form.Control type="password" placeholder="Password"  name='password' onChange={handleChange} style={{marginTop:'30px'}}/>
-    </div>
-    <Button id='btn' variant="primary" type="submit" onClick={handleSubmit}  style={{marginTop:'20px'}}>LOGIN</Button>
-  </Form>
-  </div>
   <ToastContainer/>
+  </div>
   </>
   )
 }
-
 export default Login

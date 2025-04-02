@@ -11,6 +11,8 @@ import Riceitem from './Pages/Riceitem';
 import Italianfood from './Pages/Italianfood';
 import Seafood from './Pages/Seafood';
 import Vegitem from './Pages/Vegitem';
+import Payment from './Pages/Payment';
+import Order from './Pages/Order';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
       <Route path="/italian" element={<Italianfood/>}/> 
       <Route path="/seafood" element={<Seafood/>}/> 
       <Route path="/veg" element={<Vegitem/>}/> 
+      <Route path="/pay" element={<Payment/>}/>
+      <Route path="/order" element={<Order/>}/> 
     </Routes>
     </BrowserRouter>
     </>

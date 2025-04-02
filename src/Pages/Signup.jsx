@@ -65,7 +65,6 @@ const Signup = () => {
     }
   return (
     <>
-   
     <div className='nrml'>
     <Navbars/>
     <Form style={{height:'480px',marginTop:'80px'}}>
@@ -96,49 +95,9 @@ const Signup = () => {
       <Form.Control type="password" placeholder="Password"  name="password"onChange={handleChange} required/>
     </div>{<br></br>}
     <Button id='btn' variant="primary" onClick={handleSubmit}>SIGNUP</Button>
-
   </Form>
   <ToastContainer/>
   </div>
-
-                      {/* responsive view */}
-
-   <Navbars/>
-  <div className='mobile'>
-   
-    <Form style={{height:'480px'}}>
-    <h1>SIGNUP </h1>
-
-    <div className='wrap'>
-      <Form.Label style={{color:'red'}}>{error.name}</Form.Label>
-      <Form.Control type="text" placeholder="Name" name="name"  onChange={handleChange}  style={{marginTop:'-30px'}}required/>
-    </div>{<br></br>}
-
-    <div className='wrap'>
-      <Form.Label style={{color:'red'}}>{error.phone}</Form.Label>
-      <Form.Control type="tel" placeholder="Phone"  name="phone" onChange={handleChange} style={{marginTop:'-10px'}} required/>
-    </div>{<br></br>}
-
-    <div className='wrap'>
-      <Form.Label style={{color:'red'}}>{error.email}</Form.Label>
-      <Form.Control type="mail" placeholder="Email" name="email" onChange={handleChange}  style={{marginTop:'-10px'}}required/>
-    </div>{<br></br>}
-
-    <div className='wrap'>
-      <Form.Label style={{color:'red'}}>{error.username}</Form.Label>
-      <Form.Control type="text" placeholder="Username"  name="username" onChange={handleChange} style={{marginTop:'-10px'}} required/>
-    </div>{<br></br>}
-
-    <div className='wrap'>
-      <Form.Label style={{color:'red'}}>{error.password}</Form.Label>
-      <Form.Control type="password" placeholder="Password"  name="password"onChange={handleChange} style={{marginTop:'-10px'}} required/>
-    </div>{<br></br>}
-    <Button id='btn' variant="primary" onClick={handleSubmit} style={{marginTop:'-10px'}}>SIGNUP</Button>
-
-  </Form>
-  <ToastContainer/>
-  </div>
-  
   </>
   )
 }
