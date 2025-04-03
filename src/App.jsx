@@ -15,6 +15,7 @@ import Payment from './Pages/Payment';
 import Order from './Pages/Order';
 import About from './Pages/About';
 import Contactus from './Pages/Contactus';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

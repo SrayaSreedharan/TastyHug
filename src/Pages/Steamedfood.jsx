@@ -44,7 +44,7 @@ const Steamedfood = () => {
           Product Type:
           {items.propType}
           </Card.Text>
-          <Button type='submit' style={{backgroundColor:'black',width:'150px'}}>ORDER NOW</Button>
+          <Button type='submit' className='btn2' style={{backgroundColor:'black',width:'150px'}}>ORDER NOW</Button>
         </Card.Body>
       </Card> 
     )

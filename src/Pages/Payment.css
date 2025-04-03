@@ -7,4 +7,16 @@
     justify-content: center;
     align-items: center;
 }
+.btn3{
+    padding: 15px;
+    border: none;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    background-color:black;
+    width: 150px;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-left: 100px;
+}
 
