@@ -2,57 +2,24 @@ import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 
 const Navbars = () => {
   return (
     <>
-    {/* <div className='nav' >
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container fluid>
-        <Navbar.Brand href="#" style={{fontSize:'30px',color:'orangered',padding:'30px'}}>TASTYHUG</Navbar.Brand>
-       
-       
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
-            <Nav.Link href="/" style={{padding:'30px',marginLeft:'170px'}}>HOME</Nav.Link>
-            <Nav.Link href="/login" style={{padding:'30px'}} >LOGIN</Nav.Link>
-            <Nav.Link href="/signup" style={{padding:'30px'}} >SIGNUP</Nav.Link>
-          </Nav>
-       
-      </Container>
-    </Navbar>
-  </div> */}
-
-
-
-
 <Navbar expand="sm" className="">
       <Container>
-        <Navbar.Brand href="#home">TASTYHUG</Navbar.Brand>
+        <Navbar.Brand href="#home" style={{fontSize:'50px',color:'orangered',padding:'20px'}}>TASTYHUG</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="/login">Login</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link href="/" style={{padding:'20px',color:'white'}} >HOME</Nav.Link>
+            <Nav.Link href="/login" style={{padding:'20px',color:'white'}} >LOGIN</Nav.Link>
+            <Nav.Link href="/signup" style={{padding:'20px',color:'white'}} >SIGNUP</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
-    </Navbar>  </>
+    </Navbar> 
+     </>
   )
 }
 export default Navbars

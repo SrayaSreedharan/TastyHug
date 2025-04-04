@@ -1,5 +1,6 @@
 
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import Login from './Pages/Login';
 import Signup from './Pages/Signup';
@@ -15,7 +16,6 @@ import Payment from './Pages/Payment';
 import Order from './Pages/Order';
 import About from './Pages/About';
 import Contactus from './Pages/Contactus';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

@@ -14,45 +14,45 @@ const Weoffer = () => {
   return (
     <>
     <link rel="stylesheet" href="Weoffer.css"/>
-    <div className='img '>
+    <div className='img5 '>
     <Navbarwe/>
     <div className='row'>
-    <Card style={{ width: '14rem',height:'200px'}}>
-      <Card.Img src={image} style={{height:'100px',width:'220px'}} />
+    <Card className='crd' style={{ width: '14rem',height:'200px'}}>
+      <Card.Img src={image} style={{height:'100px',width:'220px',borderRadius:'0px'}} />
       <Card.Body>
-        <Button type='button'  className='btn2' style={{width:'220px'}}> <a href='/steam'>STEAMED FOODS</a></Button>
+        <Button type='button'  className='btn2' style={{width:'220px',marginLeft:'-14px',marginTop:'-10px'}}> <a href='/steam'>STEAMED FOODS</a></Button>
       </Card.Body>
     </Card>
-    <Card style={{ width: '14rem',height:'200px'}}>
-      <Card.Img src={image1} style={{height:'100px',width:'220px'}} />
+    <Card className='crd' style={{ width: '14rem',height:'200px'}}>
+      <Card.Img src={image1} style={{height:'100px',width:'220px',borderRadius:'0px'}} />
       <Card.Body>
-        <Button type='button' className='btn2'  style={{width:'220px'}}><a href='/Arabic'>ARABIC FOOD</a></Button>
+        <Button type='button' className='btn2'  style={{width:'220px',marginLeft:'-14px',marginTop:'-10px'}}><a href='/Arabic'>ARABIC FOOD</a></Button>
       </Card.Body>
     </Card>
-    <Card style={{ width: '14rem' ,height:'200px'}}>
-      <Card.Img src={image2} style={{height:'100px',width:'220px'}} />
+    <Card  className='crd' style={{ width: '14rem' ,height:'200px'}}>
+      <Card.Img src={image2} style={{height:'100px',width:'220px',borderRadius:'0px'}} />
       <Card.Body>
-        <Button type='button' className='btn2' style={{width:'220px'}}> <a href='/rice'>RICE ITEMS</a></Button>
+        <Button type='button' className='btn2' style={{width:'220px',marginLeft:'-14px',marginTop:'-10px'}}> <a href='/rice'>RICE ITEMS</a></Button>
       </Card.Body>
     </Card>
     </div>{<br></br>}
-    <div className='row2' style={{display:'flex',padding:'10px',gap:'15px'}}>
-    <Card style={{ width: '14rem',height:'200px',flexDirection:'column'}}>
-      <Card.Img src={image3} style={{height:'100px',width:'220px'}}/>
+    <div className='row2' style={{display:'flex',padding:'10px'}}>
+    <Card className='crd' style={{ width: '14rem',height:'200px'}}>
+      <Card.Img src={image3} style={{height:'100px',width:'220px',borderRadius:'0px'}}/>
       <Card.Body>
-        <Button type='button' className='btn2' style={{width:'220px'}}><a href='/italian'>ITALIAN FOOD</a></Button>
+        <Button type='button' className='btn2' style={{width:'220px',marginLeft:'-14px',marginTop:'-10px'}}><a href='/italian'>ITALIAN FOOD</a></Button>
       </Card.Body>
     </Card>
-    <Card style={{ width: '14rem' ,height:'200px'}}>
-      <Card.Img src={image4} style={{height:'100px',width:'220px'}} />
+    <Card  className='crd' style={{ width: '14rem' ,height:'200px'}}>
+      <Card.Img src={image4} style={{height:'100px',width:'220px',borderRadius:'0px'}} />
       <Card.Body>
-        <Button type='button' className='btn2' style={{width:'220px'}}><a href='/seafood'>SEA FOOD</a></Button>
+        <Button type='button' className='btn2' style={{width:'220px',marginLeft:'-14px',marginTop:'-10px'}}><a href='/seafood'>SEA FOOD</a></Button>
       </Card.Body>
     </Card>
-    <Card style={{ width: '14rem' ,height:'200px'}}>
-      <Card.Img src={image5} style={{height:'100px',width:'220px'}} />
+    <Card  className='crd' style={{ width: '14rem' ,height:'200px'}}>
+      <Card.Img src={image5} style={{height:'100px',width:'220px',borderRadius:'0px'}} />
       <Card.Body>
-        <Button type='button' className='btn2' style={{width:'220px'}}><a href='/veg'>VEG ITEMS</a></Button>
+        <Button type='button' className='btn2' style={{width:'220px',marginLeft:'-14px',marginTop:'-10px'}}><a href='/veg'>VEG ITEMS</a></Button>
       </Card.Body>
     </Card>
     </div>

@@ -1,37 +1,43 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
-import axios from 'axios';
 import Form from 'react-bootstrap/Form';
 import '../Pages/Payment.css'
+import imge from '../Pages/pay2.png'
 
 const Payment = () => {
-  const handleSubmit=()=>{
-    const loginId= localStorage.getItem("loginId")
-    console.log(loginId)
-   axios.post("https://reactecomapi.onrender.com/order/checkout",{loginId}).then((response)=>{
-        console.log(response.data)
-    }).catch((error)=>{
-        console.log(error)
-    })
-}
+
   return (
-    <>    
+    <>   
     <div className='bg'>
     <Form>
-    <h1 >CARD DETAILS</h1>
-      <div><Form.Label  ></Form.Label>
-      <Form.Control type="text" placeholder="NAME" name='name'/></div>{<br></br>}
+    <h1 style={{marginTop:'120px',color:'orangered'}}>CARD DETAILS</h1>
+    <div className="container">
+        <div className="row">
+            <div>
+            <div>
+                <div className="cad p-3">
+                    <div className="img-box">
+                        <img src={imge} alt="" />
+                    </div>
+                    <div className="number" style={{textAlign:'center',color:'white'}}><label class="fw-bold">**** **** **** 1060</label></div>
+                    <div  style={{textAlign:'center',color:'white'}}><span>Expiry date:</span><span>10/16</span></div>
+                </div>
+            </div>
+      <div>
+        <Form.Label  ></Form.Label>
+      <Form.Control className='inpt' type="text" placeholder="NAME" name='name'/></div>{<br></br>}
       <div><Form.Label></Form.Label>
-      <Form.Control type="tel" placeholder="PHONE NUMBER"  name='number'/></div>{<br></br>}
+      <Form.Control className='inpt'  type="text" placeholder="NAME ON CARD"  name='name'/></div>{<br></br>}
       <div><Form.Label></Form.Label>
-      <Form.Control type="text" placeholder="NAME ON CARD"  name='name'/></div>{<br></br>}
+      <Form.Control  className='inpt' type="number" placeholder="CARD NUMBER"  name='number'/></div>{<br></br>}
       <div><Form.Label></Form.Label>
-      <Form.Control type="number" placeholder="CARD NUMBER"  name='number'/></div>{<br></br>}
-      <div><Form.Label></Form.Label>
-      <Form.Control type="date" placeholder="EXPIRY DATE"  name='number'/></div>{<br></br>}
-    <Button  className='btn3' type="submit"  onClick={handleSubmit}>PAY</Button>
-  </Form>
+      <Form.Control  className='inpt' type="date" placeholder="EXPIRY DATE"  name='number'/></div>{<br></br>}
+    <Button  className='btn3' type="submit"  >PAY</Button>
   </div>
+  </div>
+  </div>
+  </Form>          
+    </div>
   </>
   )
 }

@@ -46,22 +46,19 @@ const Login = () => {
         toast.error(error.response?.data?.message || "login failed ")
       })
     }
-
-
-
   return (
     <>
    <div className='nrml'>
    <Navbars/>
-    <Form className='frm'  >
+    <Form className='frm' style={{marginTop:'-10px'}}>
     <h1>LOGIN</h1>
     <div >
       <Form.Label  style={{color:'red'}}>{error.username}</Form.Label>
-      <Form.Control type="text" placeholder="Username" name='username' onChange={handleChange} />
+      <Form.Control className='inpt' type="text" placeholder="Username" name='username' onChange={handleChange} />
     </div>
     <div>
       <Form.Label style={{color:'red'}}>{error.password}</Form.Label>
-      <Form.Control type="password" placeholder="Password"  name='password' onChange={handleChange} style={{marginTop:'30px'}}/>
+      <Form.Control  className='inpt' type="password" placeholder="Password"  name='password' onChange={handleChange} style={{marginTop:'30px'}}/>
     </div>
     <Button  type="submit" className='btn2'   onClick={handleSubmit}>LOGIN</Button>
   </Form>

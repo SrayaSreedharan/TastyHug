@@ -67,34 +67,34 @@ const Signup = () => {
     <>
     <div className='nrml'>
     <Navbars/>
-    <Form style={{height:'480px',marginTop:'80px'}}>
+    <Form  className='frm'  style={{height:'480px',marginTop:'-10px'}}>
     <h1>SIGNUP </h1>
 
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.name}</Form.Label>
-      <Form.Control type="text" placeholder="Name" name="name"  onChange={handleChange} required/>
+      <Form.Control className='inpt' type="text" placeholder="Name" name="name"  onChange={handleChange} required/>
     </div>{<br></br>}
 
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.phone}</Form.Label>
-      <Form.Control type="tel" placeholder="Phone"  name="phone" onChange={handleChange} required/>
+      <Form.Control className='inpt' type="tel" placeholder="Phone"  name="phone" onChange={handleChange} required/>
     </div>{<br></br>}
 
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.email}</Form.Label>
-      <Form.Control type="mail" placeholder="Email" name="email" onChange={handleChange} required/>
+      <Form.Control className='inpt' type="mail" placeholder="Email" name="email" onChange={handleChange} required/>
     </div>{<br></br>}
 
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.username}</Form.Label>
-      <Form.Control type="text" placeholder="Username"  name="username" onChange={handleChange} required/>
+      <Form.Control className='inpt'  type="text" placeholder="Username"  name="username" onChange={handleChange} required/>
     </div>{<br></br>}
 
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.password}</Form.Label>
-      <Form.Control type="password" placeholder="Password"  name="password"onChange={handleChange} required/>
+      <Form.Control  className='inpt' type="password" placeholder="Password"  name="password"onChange={handleChange} required/>
     </div>{<br></br>}
-    <Button id='btn' variant="primary" onClick={handleSubmit}>SIGNUP</Button>
+    <Button className='btn2' onClick={handleSubmit} >SIGNUP</Button>
   </Form>
   <ToastContainer/>
   </div>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
 .bg{
     background-image: url('C:\TastyHug\src\Pages\PAY.jpg');
     height: 750px;
@@ -11,12 +13,40 @@
     padding: 15px;
     border: none;
     color: white;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Poppins', sans-serif;
     cursor: pointer;
     background-color:black;
     width: 150px;
     font-size: 16px;
     margin-top: 30px;
+    margin-left: 80px;
+}
+.inpt{
+    display: flex;
+    margin: auto;
+    padding:20px;
+    padding-left: 20px;
+    border-radius: 0px;
+    width: 300px;
+    height: 20px;
+    /* box-sizing: border-box; */
+    border: 1px solid #ddd;
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    margin: 30px ;
+}
+.container .cad .img-box {
     margin-left: 100px;
+    margin-top: -60px;
+    width: 80px;
+    height: 50px;
+}
+.container .cad img {
+    width: 100%;
+    object-fit: fill;
+}
+.container .cad .number {
+    font-size: 24px;
 }
 
