@@ -73,27 +73,27 @@ const Signup = () => {
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.name}</Form.Label>
       <Form.Control className='inpt' type="text" placeholder="Name" name="name"  onChange={handleChange} required/>
-    </div>{<br></br>}
+    </div>
 
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.phone}</Form.Label>
       <Form.Control className='inpt' type="tel" placeholder="Phone"  name="phone" onChange={handleChange} required/>
-    </div>{<br></br>}
+    </div>
 
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.email}</Form.Label>
       <Form.Control className='inpt' type="mail" placeholder="Email" name="email" onChange={handleChange} required/>
-    </div>{<br></br>}
+    </div>
 
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.username}</Form.Label>
       <Form.Control className='inpt'  type="text" placeholder="Username"  name="username" onChange={handleChange} required/>
-    </div>{<br></br>}
+    </div>
 
     <div className='wrap'>
       <Form.Label style={{color:'red'}}>{error.password}</Form.Label>
       <Form.Control  className='inpt' type="password" placeholder="Password"  name="password"onChange={handleChange} required/>
-    </div>{<br></br>}
+    </div>
     <Button className='btn2' onClick={handleSubmit} >SIGNUP</Button>
   </Form>
   <ToastContainer/>

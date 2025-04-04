@@ -11,19 +11,19 @@ const Navbarwe = () => {
     <div className='nav' >
     <Navbar expand="lg" className="">
       <Container fluid>
-        <Navbar.Brand href="#" style={{fontSize:'50px',color:'orangered',padding:'20px'}}>TASTYHUG</Navbar.Brand>
+        <Navbar.Brand href="#" style={{fontSize:'50px',color:'orangered'}}>TASTYHUG</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
+            style={{ maxHeight: '200px' }}
             navbarScroll
           >
-            <Nav.Link href="/" style={{padding:'20px',color:'white'}}>HOME</Nav.Link>
-            <Nav.Link href="/about" style={{padding:'20px',color:'white'}}>ABOUT</Nav.Link>
-            <Nav.Link href="/weoffer" style={{padding:'20px',color:'white'}}>WEOFFERED</Nav.Link>
-            <Nav.Link href="/order" style={{padding:'20px',color:'white'}}>ORDERS</Nav.Link>
-            <Nav.Link href="/contact" style={{padding:'20px',color:'white'}}>CONTACT US</Nav.Link>
+            <Nav.Link href="/" style={{color:'white'}}>HOME</Nav.Link>
+            <Nav.Link href="/about" style={{color:'white'}}>ABOUT</Nav.Link>
+            <Nav.Link href="/weoffer" style={{color:'white'}}>WEOFFERED</Nav.Link>
+            <Nav.Link href="/order" style={{color:'white'}}>ORDERS</Nav.Link>
+            <Nav.Link href="/contact" style={{color:'white'}}>CONTACT US</Nav.Link>
             </Nav>
           <Form className="">
             <Form.Control

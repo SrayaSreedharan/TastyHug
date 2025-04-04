@@ -11,7 +11,7 @@ const About = () => {
       <div className='aboutus' style={{ height:'400px',width:'600px',marginLeft:'30px'}}>
         <h1 > About us</h1>
         <p style={{color:'white'}}>
-        TASTYHUG opened on Thanks giving Day 2000. Chef / Owner sraya sreedharan began baking pies and selling them to restaurants and his neighbors out of a small kitchen at the corner of Hudson and North Moore St. in Tribeca. Today, NYC’s beloved restaurant and pie shop celebrates 25 years of classic, made from scratch American cooking.
+        TASTYHUG opened on Thanks giving Day 2000. Chef / Owner sraya sreedharan began baking pies and selling them to restaurants and his neighbors out of a small kitchen at the corner of Hudson and North Moore St. in Tribeca. Today, NYC’s beloved restaurant and tastyhug celebrates 25 years of classic, made from scratch American cooking.
         </p>
        <div> <img src={image4} alt="img" style={{height:'200px',width:'300px'}} /></div>
        <div style={{marginTop:'-200px'}}> <img src={image5} className='abt' style={{height:'200px',width:'300px'}} /></div>

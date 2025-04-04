@@ -15,7 +15,10 @@
         margin-left:-1px;
         margin-top: 220px;
     }
+    .about{
+        height: 1100px;
+    }
     .aboutus{
-        width: 340px;
+        width: 320px;
     }
 }
