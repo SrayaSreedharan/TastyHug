@@ -9,9 +9,9 @@ import { Button } from 'react-bootstrap'
 const Riceitem = () => {
   const[data,setData]=useState([])
   useEffect(()=>{
-      axios.get(" https://reactecomapi.onrender.com/prop/getall").then((response)=>{
+      axios.get(" https://reactecomapi.onrender.com/foods/products").then((response)=>{
           console.log(response)
-          setData(response.data.data)
+          setData(response.data)
       }).catch((error)=>{
           console.log(error)
       })
@@ -22,29 +22,41 @@ const Riceitem = () => {
     <>
     <div className='main'>
     <Navbarwe/>
-    <div style={{display:'flex',gap:'20px'}} >
+    <div className='rows' style={{display:'flex',gap:'10px'}} >
     {data.map((items)=>(
-        <Card  style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={items.propimages} />
+        <Card  style={{ width: '18rem',height:'560px',marginTop:'-30px',backgroundColor:'black',color:'white'}}>
+        <Card.Img variant="top" src={items.foodImage} />
         <Card.Body>
           <Card.Title></Card.Title>
           <Card.Text>
-          Product Description:
-          {items.propDescription}
+          Availability:
+          {items.availability}
           </Card.Text>
           <Card.Text>
-          Product Name:
-          {items.propName}
+          Category:
+          {items.category}
           </Card.Text>
           <Card.Text>
-          Product Prize:
-          {items.propPrize}
+          createdAt:
+          {items.createdAt}
           </Card.Text>
           <Card.Text>
-          Product Type:
-          {items.propType}
+          Description:
+          {items.description}
           </Card.Text>
-          <Button type='submit' className='btn2' style={{backgroundColor:'black',width:'150px'}} >SELECT ITEM</Button>
+          <Card.Text>
+          Name:
+          {items.name}
+          </Card.Text>
+          <Card.Text>
+          Preparation time:
+          {items.preparationTime}
+          </Card.Text>
+          <Card.Text>
+          Price
+          {items.price}
+          </Card.Text>
+          <Button type='submit'className='btn2'  style={{backgroundColor:'orangered',width:'150px',marginLeft:'40px',marginTop:'-10px'}} href='/pay' >ORDER NOW</Button>
         </Card.Body>
       </Card> 
     )

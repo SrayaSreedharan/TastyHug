@@ -3,11 +3,11 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './Login.css'
-import Navbars from '../Compoents/Navbars';
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom';
 import { ToastContainer,toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import Navbaru from '../Compoents/Navbaru';
 
 const Signup = () => {
     const[signup,setSignup]=useState({})
@@ -66,7 +66,7 @@ const Signup = () => {
   return (
     <>
     <div className='nrml'>
-    <Navbars/>
+    <Navbaru/>
     <Form  className='frm'  style={{height:'480px',marginTop:'-10px'}}>
     <h1>SIGNUP </h1>
 

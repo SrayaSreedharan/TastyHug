@@ -1,0 +1,41 @@
+.myimage{
+    background-image: url('C:\TastyHug\src\Admin\adminbg.jpg');
+    background-repeat: no-repeat;
+    height: 750px;
+    background-size: 100% 100%;
+    display: block;
+}
+.frm2{
+    margin-top: 200px;
+    height: 350px;
+    width: 400px;
+    
+    display: flex;
+    margin-left: 440px;
+    align-items: center;
+    justify-content: center;
+   
+    font-family: 'Poppins', sans-serif;
+    line-height: 1;
+    flex-direction: column;   
+}
+.wrap2{
+    border-radius: 25px;
+}
+.btns{
+    background-color: black;
+    border-color: black;
+    margin-top: 40px;
+
+}
+@media only screen and (max-width:600px){
+    .frm2{
+        margin-left: -40px;
+    }
+    .btns{
+        background-color: black;
+        border-color: black;
+        margin-top: 40px;
+
+    }
+}

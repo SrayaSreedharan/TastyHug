@@ -1,26 +1,22 @@
 import React from 'react'
-import { useState,useEffect } from 'react'
+import { useState } from 'react'
+import { useEffect } from 'react'
 import axios from 'axios'
-import Navbarwe from '../Compoents/Navbarwe'
-import '../Pages/Main.css'
-import  Card from 'react-bootstrap/Card'
-import { Button } from 'react-bootstrap'
 
-const Italianfood = () => {
+const Viewitem = () => {
   const[data,setData]=useState([])
+  const loginId= localStorage.getItem("loginId")
   useEffect(()=>{
-      axios.get("https://reactecomapi.onrender.com/foods/products").then((response)=>{
-          console.log(response.data)
-          setData(response.data)
+      axios.get(`https://reactecomapi.onrender.com/foods/products/${loginId}`).then((response)=>{
+      console.log(response.data)
+      localStorage.getItem("loginId")
+      setData(response.data.data)
       }).catch((error)=>{
           console.log(error)
       })
-
-  },[])
+  },[loginId])
   return (
-    <>
     <div className='main'>
-    <Navbarwe/>
     <div className='row' style={{display:'flex',gap:'20px'}} >
     {data.map((items)=>(
          <Card  style={{ width: '18rem',height:'560px',marginTop:'-30px',backgroundColor:'black',color:'white'}}>
@@ -55,14 +51,13 @@ const Italianfood = () => {
            Price
            {items.price}
            </Card.Text>
-           <Button type='submit'className='btn2'  style={{backgroundColor:'orangered',width:'150px',marginLeft:'40px',marginTop:'-10px'}} href='/pay' >ORDER NOW</Button>
          </Card.Body>
        </Card> 
     )
     )}
     </div>
     </div>
-    </>
   )
 }
-export default Italianfood
+
+export default Viewitem

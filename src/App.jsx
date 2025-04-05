@@ -16,7 +16,8 @@ import Payment from './Pages/Payment';
 import Order from './Pages/Order';
 import About from './Pages/About';
 import Contactus from './Pages/Contactus';
-import Selected from './Pages/Selected';
+import Ownersign from './Admin/Ownersign';
+import Homead from './Admin/Homead';
 
 function App() {
   return (
@@ -33,11 +34,12 @@ function App() {
       <Route path="/italian" element={<Italianfood/>}/> 
       <Route path="/seafood" element={<Seafood/>}/> 
       <Route path="/veg" element={<Vegitem/>}/> 
-      <Route path="/select" element={<Selected/>}/> 
       <Route path="/pay" element={<Payment/>}/>
       <Route path="/order" element={<Order/>}/> 
       <Route path="/about" element={<About/>}/> 
       <Route path="/contact" element={<Contactus/>}/> 
+      <Route path="/owner" element={<Ownersign/>}/> 
+      <Route path="/homead" element={<Homead/>}/>
     </Routes>
     </BrowserRouter>
     </>
