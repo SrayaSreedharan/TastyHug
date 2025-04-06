@@ -25,14 +25,14 @@ const Payment = () => {
             </div>
       <div>
         <Form.Label  ></Form.Label>
-      <Form.Control className='inpt2' type="text" placeholder="NAME" name='name'/></div>
+      <Form.Control className='inpt2' type="text" placeholder="NAME" name='name'required/></div>
       <div><Form.Label></Form.Label>
-      <Form.Control className='inpt2'  type="select" placeholder="NAME ON CARD"  name='name'/></div>
+      <Form.Control className='inpt2'  type="select" placeholder="NAME ON CARD"  name='name' required/></div>
       <div><Form.Label></Form.Label>
-      <Form.Control  className='inpt2' type="number" placeholder="CARD NUMBER"  name='number'/></div>
+      <Form.Control  className='inpt2' type="number" placeholder="CARD NUMBER"  name='number' required/></div>
       <div><Form.Label></Form.Label>
-      <Form.Control  className='inpt2' type="date" placeholder="EXPIRY DATE"  name='number'/></div>
-    <Button  className='btn3' type="submit"  >PAY</Button>
+      <Form.Control  className='inpt2' type="date" placeholder="EXPIRY DATE"  name='number' required/></div>
+    <Button  className='btn3' type="submit">PAY</Button>
   </div>
   </div>
   </div>

@@ -40,7 +40,7 @@ const Login = () => {
         console.log(response)
         toast.success('successfully')
         localStorage.setItem("loginId",response.data.loginId)
-        navigate('/weoffer')
+        navigate('/about')
       }).catch((error)=>{
         console.log(error)
         toast.error(error.response?.data?.message || "login failed ")

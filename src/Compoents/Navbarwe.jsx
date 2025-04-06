@@ -19,7 +19,6 @@ const Navbarwe = () => {
             style={{ maxHeight: '390px' }}
             navbarScroll
           >
-            <Nav.Link href="/" style={{color:'white',padding:'20px'}}>HOME</Nav.Link>
             <Nav.Link href="/about" style={{color:'white',padding:'20px'}}>ABOUT</Nav.Link>
             <Nav.Link href="/weoffer" style={{color:'white',padding:'20px'}}>OUR MENU</Nav.Link>
             <Nav.Link href="/order" style={{color:'white',padding:'20px'}}> YOUR ORDERS</Nav.Link>
@@ -30,7 +29,7 @@ const Navbarwe = () => {
               type="search"
               placeholder="Search" style={{width:'200px',marginTop:'20px'}}
             />
-            <Button variant="outline-success" style={{color:'white',backgroundColor:'black',border:'none',height:'40px',marginLeft:'230px',marginTop:'-65px'}} href="/">LOGOUT</Button>
+            <Button variant="outline-success" style={{color:'white',backgroundColor:'black',border:'none',height:'40px',marginLeft:'230px',marginTop:'-65px'}} href="/login">LOGOUT</Button>
           </Form>
         </Navbar.Collapse>
       </Container>

@@ -10,14 +10,14 @@ const Viewitem = () => {
       axios.get(`https://reactecomapi.onrender.com/foods/products/${loginId}`).then((response)=>{
       console.log(response.data)
       localStorage.getItem("loginId")
-      setData(response.data.data)
+      setData(response.data)
       }).catch((error)=>{
           console.log(error)
       })
   },[loginId])
   return (
-    <div className='main'>
-    <div className='row' style={{display:'flex',gap:'20px'}} >
+    <div>
+    <div  style={{display:'flex',gap:'20px'}} >
     {data.map((items)=>(
          <Card  style={{ width: '18rem',height:'560px',marginTop:'-30px',backgroundColor:'black',color:'white'}}>
          <Card.Img variant="top" src={items.foodImage} />

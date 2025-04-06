@@ -18,6 +18,8 @@ import About from './Pages/About';
 import Contactus from './Pages/Contactus';
 import Ownersign from './Admin/Ownersign';
 import Homead from './Admin/Homead';
+import Additem from './Admin/Additem';
+import Viewitem from './Admin/Viewitem';
 
 function App() {
   return (
@@ -40,6 +42,8 @@ function App() {
       <Route path="/contact" element={<Contactus/>}/> 
       <Route path="/owner" element={<Ownersign/>}/> 
       <Route path="/homead" element={<Homead/>}/>
+      <Route path="/view" element={<Viewitem/>}/>
+      <Route path="/add" element={<Additem/>}/>
     </Routes>
     </BrowserRouter>
     </>
