@@ -23,9 +23,12 @@ const Ownersign = () => {
       const validate=()=>{
         const errorMessage={}
         
-        if(!signup.name){
-            errorMessage.name="Enter Name"
+        if(!signup.restaurantName){
+            errorMessage.restaurantName="Enter Name"
         }
+        if(!signup.address){
+          errorMessage.address="Enter Address"
+      }
         if(!signup.phone){
             errorMessage.phone="Enter number"
         }
@@ -54,7 +57,7 @@ const Ownersign = () => {
             e.preventDefault()
             axios.post("https://reactecomapi.onrender.com/owner/ownersignup",signup).then((response)=>{
               console.log(response)
-              toast.success('signup successfull')
+              toast.success('sginup successfull')
               navigate('/login')
         
             }).catch((error)=>{
@@ -69,11 +72,12 @@ const Ownersign = () => {
     <div className='myimage'>
       <Navbaru/>
     <Form  className='frm2'  style={{height:'480px',marginTop:'-10px'}}>
-    <h1 style={{color:'black'}}>ADMIN</h1>
-
+    <h1 style={{color:'black'}}>OWNER</h1>
+      
+      
     <div className='wrap2'>
-      <Form.Label style={{color:'red'}}>{error.name}</Form.Label>
-      <Form.Control className='inpt' type="text" placeholder="Name" name="name"  onChange={handleChange} required/>
+      <Form.Label style={{color:'red'}}>{error.username}</Form.Label>
+      <Form.Control className='inpt'  type="text" placeholder="Username"  name="username" onChange={handleChange} required/>
     </div>
 
     <div className='wrap2'>
@@ -85,15 +89,20 @@ const Ownersign = () => {
       <Form.Label style={{color:'red'}}>{error.email}</Form.Label>
       <Form.Control className='inpt' type="mail" placeholder="Email" name="email" onChange={handleChange} required/>
     </div>
-
+    
     <div className='wrap2'>
-      <Form.Label style={{color:'red'}}>{error.username}</Form.Label>
-      <Form.Control className='inpt'  type="text" placeholder="Username"  name="username" onChange={handleChange} required/>
+      <Form.Label style={{color:'red'}}>{error.name}</Form.Label>
+      <Form.Control className='inpt' type="text" placeholder="Restaurant Name" name="restaurantName"  onChange={handleChange} required/>
     </div>
+    <div className='wrap2'>
+      <Form.Label style={{color:'red'}}>{error.name}</Form.Label>
+      <Form.Control className='inpt' type="text" placeholder="Address" name="address"  onChange={handleChange} required/>
+    </div>
+
 
     <div className='wrap2'>
       <Form.Label style={{color:'red'}}>{error.password}</Form.Label>
-      <Form.Control  className='inpt' type="password" placeholder="Password"  name="password"onChange={handleChange} required/>
+      <Form.Control  className='inpt' type="password" placeholder="Password"  name="password" onChange={handleChange} required/>
     </div>
     <Button className='btns' onClick={handleSubmit} href='/homead'>SIGNUP</Button>
   </Form>

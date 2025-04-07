@@ -40,7 +40,14 @@ const Login = () => {
         console.log(response)
         toast.success('successfully')
         localStorage.setItem("loginId",response.data.loginId)
-        navigate('/about')
+        // navigate('/homead') 
+        const role=response.data.role
+        if( role == 'owner' ){
+          navigate('/homead') 
+        }
+        else{
+          navigate('/about') 
+        }
       }).catch((error)=>{
         console.log(error)
         toast.error(error.response?.data?.message || "login failed ")

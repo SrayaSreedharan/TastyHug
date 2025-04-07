@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import axios from 'axios'
+import { Button } from 'react-bootstrap'
 
 const Viewitem = () => {
   const[data,setData]=useState([])
@@ -15,6 +16,15 @@ const Viewitem = () => {
           console.log(error)
       })
   },[loginId])
+  const buttonClick=(id)=>{
+    const prdId=id
+    console.log(id)
+    axios.delete(`https://reactecomapi.onrender.com/foods/deleteproducts/${prdId}`).then((response)=>{
+      console.log(response.data)
+    }).catch((error)=>{
+      console.log(error)
+    })
+  }
   return (
     <div>
     <div  style={{display:'flex',gap:'20px'}} >
@@ -52,12 +62,12 @@ const Viewitem = () => {
            {items.price}
            </Card.Text>
          </Card.Body>
-       </Card> 
+         <Button  type='submit' onClick={()=>buttonClick(items._id)}>DELETE</Button>
+       </Card>  
     )
     )}
     </div>
     </div>
   )
 }
-
 export default Viewitem
