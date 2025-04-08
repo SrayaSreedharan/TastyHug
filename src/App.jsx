@@ -43,6 +43,7 @@ function App() {
       <Route path="/owner" element={<Ownersign/>}/> 
       <Route path="/homead" element={<Homead/>}/>
       <Route path="/view" element={<Viewitem/>}/>
+     
       <Route path="/add" element={<Owneradd/>}/>
     </Routes>
     </BrowserRouter>

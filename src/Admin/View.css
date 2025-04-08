@@ -1,0 +1,44 @@
+.bttn{
+    background-color: orangered;
+    color: black;
+    border-radius: 0px;
+    border-color: white;
+    margin-left: 80px;
+}
+.btn3{
+    margin-left: 400px;
+
+}
+.fm{
+   margin-left: 300px;
+}
+@media only screen and (max-width:600px){
+    .add{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap:'90px'
+    }
+    .grey{
+        background-color: lightgray;
+        height: 1200px;
+    }
+    .fm{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-left: 0px;
+    }
+    .imgfrm{
+        margin-left: 110px;
+    }
+    h6{
+        text-align: center;
+       padding: 20px;
+    } 
+    .btn3{
+        margin-left: -40px;
+    }
+}

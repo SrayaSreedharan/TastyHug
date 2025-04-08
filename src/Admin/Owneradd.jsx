@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { ToastContainer,toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import '../Admin/View.css'
 
 const Owneradd = () => {
  const[item,setItem]=useState([])
@@ -11,11 +12,17 @@ const Owneradd = () => {
       console.log(item)
     }
 
+    const fileChange=(e)=>{
+        
+        setItem({...item, foodImage:e.target.files[0]})
+        console.log(item)
+    }
+
     const validate=()=>{
 
     const errorMessage={}
-    if(!item.image){
-        errorMessage.image="Upload image"
+    if(!item.foodImage){
+        errorMessage.foodImage="Upload image"
     } 
     if(!item.name){
      errorMessage.name="Enter Name"
@@ -32,8 +39,8 @@ const Owneradd = () => {
     if(!item.availability){
         errorMessage.availability="Enter Aavailability"
     }
-    if(!item.isveg){
-        errorMessage.isveg="Enter isVeg"
+    if(!item.isVeg){
+        errorMessage.isVeg="Enter isVeg"
     }
     if(!item.Ingredients){
         errorMessage.Ingredients="Enter Ingredients"
@@ -47,6 +54,23 @@ const Owneradd = () => {
   setError(errorMessage)
     return Object.keys(errorMessage).length===0
    }
+
+
+   const formdata=new FormData()
+   formdata.append("foodImage",item.foodImage)
+   formdata.append("name",item.name)
+   formdata.append("description",item.description)
+   formdata.append("price",item.price)
+   formdata.append("category",item.category)
+   formdata.append("isVeg",item.isVeg)
+   formdata.append("availability",item.availability)
+   formdata.append("Ingredients",item.Ingredients)
+   formdata.append("Spicylevel",item.Spicylevel)
+   formdata.append("time",item.time)
+
+
+
+
     const handleSubmit=(e)=>{
          if(!validate()){
            console.log("error")
@@ -54,7 +78,7 @@ const Owneradd = () => {
        }
        e.preventDefault()
        const loginId= localStorage.getItem("loginId")
-        axios.post(`https://reactecomapi.onrender.com/foods/addfood/${loginId}`).then((response)=>{
+        axios.post(`https://reactecomapi.onrender.com/foods/addfood/${loginId}`,formdata).then((response)=>{
             console.log(response)
              toast.success('successfully')
             localStorage.setItem("loginId",response.data.loginId)
@@ -66,19 +90,29 @@ const Owneradd = () => {
   return (
     <>
     <div style={{backgroundColor:'lightgray',height:'740px',marginTop:'-100px'}}>
-        <h6 style={{marginTop:'100px',textAlign:'center'}}>ITEM DETAILS</h6>{<br></br>}
-        <form style={{display:'flex',gap:'15px',justifyContent:'center',flexDirection:'column',alignItems:'center'}}>
-        <label style={{color:'red'}}>{error.image}<input type="file"  placeholder='Image' name='image' onChange={handleChange} style={{marginLeft:'100px'}}/></label>  
+        <h6 style={{marginTop:'100px',marginLeft:'30px',padding:"20px"}}>ITEM DETAILS</h6>{<br></br>}
+        <form className='fm' style={{gap:"15px"}}>
+        <label style={{color:'red'}}>{error.image}<input className='imgfrm' type="file"  placeholder='Image' name='foodImage' onChange={fileChange} /></label>  
       <label style={{color:'red'}}>{error.name}<input type="text"  placeholder='Name' name='name' onChange={handleChange} /></label>
-      <label style={{color:'red'}}>{error.description}<input type="text"  placeholder='Description'  name='description' onChange={handleChange}/></label>
-      <label style={{color:'red'}}>{error.price}<input type="number"  placeholder='Price' name='price' onChange={handleChange}/></label>
-      <label style={{color:'red'}}>{error.category}<input type="text"  placeholder='Category' name='category' onChange={handleChange}/></label>
-      <label style={{color:'red'}}>{error.availability}<input type="text"  placeholder='Availability' name='availability' onChange={handleChange}/></label>
-      <label style={{color:'red'}}>{error.isveg }<input type="text"  placeholder='isVeg'  name=' isveg 'onChange={handleChange}/></label>
-      <label style={{color:'red'}}>{error.Ingredients}<input type="text"  placeholder='Ingredients' name='Ingredients'  onChange={handleChange}/></label>
+      <label style={{color:'red'}}>{error.description}<input type="textArea"  placeholder='Description'  name='description' onChange={handleChange}/></label>
+      <label style={{color:'red'}}>{error.price}<input type="number"  placeholder='Price' name='price' onChange={handleChange}/></label>{<br></br>}
+      <label >{error.availability}
+        Availability:
+        True<input type="radio" value='true'  name='availability' onChange={handleChange}/>
+        False<input type="radio" value='false'  name='availability' onChange={handleChange}/></label>
+      
+        <label style={{color:'red'}}>{error.category}<input type="text"  placeholder='Category' name='category' onChange={handleChange}/></label>
+
+      <label >{error.isVeg }
+        Veg:
+        True<input type="radio" value='true'  name='isVeg' onChange={handleChange}/>
+      False<input type="radio" value='false'  name='isVeg' onChange={handleChange}/></label>
+
+
+      <label style={{color:'red'}}>{error.Ingredients}<input type="text"  placeholder='Ingredients' name='Ingredients'  onChange={handleChange}/></label>{<br></br>}
       <label style={{color:'red'}}>{error.Spicylevel}<input type="text"  placeholder='Spicy level' name='Spicylevel'  onChange={handleChange}/></label>
-      <label style={{color:'red'}}>{error.time}<input type="time"  placeholder='preparation Time' name='time'  onChange={handleChange}/></label>
-      <button type="submit" className='btn3' style={{marginLeft:'700px',marginRight:'700px'}}onClick={handleSubmit}>Add</button>
+      <label style={{color:'red'}}>{error.time}<input type="time"  placeholder='preparation Time' name='time'  onChange={handleChange}/></label>{<br></br>}
+      <button type="submit" className='btn3' onClick={handleSubmit} >Add</button>
     </form>
     </div>
     </>
