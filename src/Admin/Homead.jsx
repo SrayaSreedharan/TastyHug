@@ -4,12 +4,15 @@ import { IoMdSearch } from "react-icons/io";
 import { IoMailOpenOutline } from "react-icons/io5";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { BiSolidDashboard } from "react-icons/bi";
-import { FaRegUser } from "react-icons/fa";
 import { IoAddCircleOutline } from "react-icons/io5";
 import { CiViewList } from "react-icons/ci";
 import Card from 'react-bootstrap/Card';
+import image2 from '../Admin/total.png'
+import image3 from '../Admin/weekadd.png'
+import image4 from '../Admin/weeksa.png'
 
 const Homead = () => {
+  
   return (
     <>
     <div style={{height:'40px',width:'1530px',backgroundColor:' rgb(0, 0, 255)',color:'white'}}>
@@ -22,13 +25,13 @@ const Homead = () => {
     <img src={image} style={{height:'90px',marginLeft:'50px'}}></img>
     <h5 style={{textAlign:'center'}}>SRAYA SREEDHARAN{<br></br>}Lollino Resturant</h5>{<br></br>}
     <BiSolidDashboard /> <h6 style={{fontSize:'15px',marginLeft:'24px',marginTop:'-18px'}}>Dash Board</h6>
-    {/* <FaRegUser /> <h6 style={{fontSize:'15px',marginLeft:'24px',marginTop:'-18px'}}>Users</h6> */}
     <IoAddCircleOutline /> <h6 style={{fontSize:'15px',marginLeft:'24px',marginTop:'-18px'}}><a href='/add'>Add Items</a></h6>
     <CiViewList /> <h6 style={{fontSize:'15px',marginLeft:'24px',marginTop:'-18px'}} >< a href='/view'>View Items</a></h6>
     </div>
-    <div style={{height:'680px',width:'1400px',marginLeft:'200px',marginTop:'-730px'}}>
-      <div style={{display:'flex',justifyContent:'center',gap:'80px'}}>
+    <div style={{height:'680px',width:'1400px',marginLeft:'150px',marginTop:'-730px'}}>
+      <div style={{display:'flex',justifyContent:'center',gap:'20px'}}>
     <Card style={{ width: '18rem',marginTop:'100px' ,backgroundColor:'lightpink'}}>
+    <Card.Img variant="top" src={image2} style={{height:'150px',width:'200px',marginLeft:'50px'}}/>
       <Card.Body>
       <Card.Title>Total Sale</Card.Title>
         <Card.Text>
@@ -37,10 +40,30 @@ const Homead = () => {
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem',marginTop:'100px',backgroundColor:' #5cd6d2' }}>
+    <Card.Img variant="top" src={image3} style={{height:'150px',width:'280px'}}/>
       <Card.Body>
       <Card.Title>Weekly Add</Card.Title>
         <Card.Text>
          30 Items
+        </Card.Text>
+      </Card.Body>
+    </Card>
+    <Card style={{ width: '18rem',marginTop:'100px',backgroundColor:'#6ad147'}}>
+    <Card.Img variant="top" src={image4} style={{height:'150px',width:'280px'}}/>
+      <Card.Body>
+      <Card.Title>Weekly Sales</Card.Title>
+        <Card.Text>
+         10 Above Items
+        </Card.Text>
+      </Card.Body>
+    </Card>
+    </div>
+    <div style={{display:'flex',justifyContent:'center',gap:'20px',marginTop:'-50px'}}>
+    <Card style={{ width: '18rem',marginTop:'100px',backgroundColor:'#6ad147'}}>
+      <Card.Body>
+      <Card.Title>Weekly Sales</Card.Title>
+        <Card.Text>
+         10 Above Items
         </Card.Text>
       </Card.Body>
     </Card>
@@ -52,11 +75,11 @@ const Homead = () => {
         </Card.Text>
       </Card.Body>
     </Card>
+    
     </div>
     </div>
     </>
   )
 }
-
 export default Homead
 

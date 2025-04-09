@@ -68,9 +68,6 @@ const Owneradd = () => {
    formdata.append("Spicylevel",item.Spicylevel)
    formdata.append("time",item.time)
 
-
-
-
     const handleSubmit=(e)=>{
          if(!validate()){
            console.log("error")
@@ -81,7 +78,6 @@ const Owneradd = () => {
         axios.post(`https://reactecomapi.onrender.com/foods/addfood/${loginId}`,formdata).then((response)=>{
             console.log(response)
              toast.success('successfully')
-            localStorage.setItem("loginId",response.data.loginId)
         }).catch((error)=>{
             console.log(error)
         })
@@ -90,26 +86,22 @@ const Owneradd = () => {
   return (
     <>
     <div style={{backgroundColor:'lightgray',height:'740px',marginTop:'-100px'}}>
-        <h6 style={{marginTop:'100px',marginLeft:'30px',padding:"20px",textAlign:'center'}}>ITEM DETAILS</h6>{<br></br>}
+        <h6 style={{marginTop:'100px',marginLeft:'30px',padding:"20px"}}>ITEM DETAILS</h6>{<br></br>}
         <form className='fm' style={{gap:"15px"}}>
-        <label style={{color:'red'}}>{error.image}<input className='imgfrm' type="file"  placeholder='Image' name='foodImage' onChange={fileChange} /></label>  
+        <label style={{color:'red'}}>{error.image}<input className='imgfrm' type="file"  placeholder='Image' name='foodImage' onChange={fileChange} /></label>{<br></br>}
       <label style={{color:'red'}}>{error.name}<input type="text"  placeholder='Name' name='name' onChange={handleChange} /></label>
       <label style={{color:'red'}}>{error.description}<input type="textArea"  placeholder='Description'  name='description' onChange={handleChange}/></label>
-      <label style={{color:'red'}}>{error.price}<input type="number"  placeholder='Price' name='price' onChange={handleChange}/></label>{<br></br>}
+      <label style={{color:'red'}}>{error.price}<input type="number"  placeholder='Price' name='price' onChange={handleChange}/></label>
       <label >{error.availability}
         Availability:
         True<input type="radio" value='true'  name='availability' onChange={handleChange}/>
-        False<input type="radio" value='false'  name='availability' onChange={handleChange}/></label>
-      
+        False<input type="radio" value='false'  name='availability' onChange={handleChange}/></label>{<br></br>}
         <label style={{color:'red'}}>{error.category}<input type="text"  placeholder='Category' name='category' onChange={handleChange}/></label>
-
       <label >{error.isVeg }
         Veg:
         True<input type="radio" value='true'  name='isVeg' onChange={handleChange}/>
       False<input type="radio" value='false'  name='isVeg' onChange={handleChange}/></label>
-
-
-      <label style={{color:'red'}}>{error.Ingredients}<input type="text"  placeholder='Ingredients' name='Ingredients'  onChange={handleChange}/></label>{<br></br>}
+      <label style={{color:'red'}}>{error.Ingredients}<input type="text"  placeholder='Ingredients' name='Ingredients'  onChange={handleChange}/></label>
       <label style={{color:'red'}}>{error.Spicylevel}<input type="text"  placeholder='Spicy level' name='Spicylevel'  onChange={handleChange}/></label>
       <label style={{color:'red'}}>{error.time}<input type="time"  placeholder='preparation Time' name='time'  onChange={handleChange}/></label>{<br></br>}
       <button type="submit" className='btn3' onClick={handleSubmit} >Add</button>

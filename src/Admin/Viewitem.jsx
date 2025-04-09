@@ -17,6 +17,7 @@ const Viewitem = () => {
           console.log(error)
       })
   },[])
+  
   const buttonClick=(id)=>{
     const prdId=id
     console.log(id)
@@ -68,6 +69,7 @@ const Viewitem = () => {
            {item.price}
            </Card.Text>
            <Button className='bttn' type='submit' onClick={()=>buttonClick(item._id)} >DELETE</Button>
+           <Button   className='bttn' type='submit' href='/update' >UPDATE</Button>
          </Card.Body>
        </Card>  
     )
@@ -75,7 +77,7 @@ const Viewitem = () => {
     </>)
 :(
   <>
-<h2 style={{color:'red',fontFamily:'cursive',display:'flex',justifyContent:'center',alignItems:'center',alignContent:'center'}}>Items is Empty.Please Add</h2> 
+<h2 style={{color:'red',fontFamily:'cursive',margin:'450px',marginTop:'280px',marginLeft:'500px'}}>Items is Empty.Please Add</h2> 
   </>
 )      
     }

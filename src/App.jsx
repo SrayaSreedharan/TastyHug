@@ -20,6 +20,7 @@ import Ownersign from './Admin/Ownersign';
 import Homead from './Admin/Homead';
 import Viewitem from './Admin/Viewitem';
 import Owneradd from './Admin/Owneradd';
+import Ownerupdate from './Admin/Ownerupdate';
 
 function App() {
   return (
@@ -43,8 +44,9 @@ function App() {
       <Route path="/owner" element={<Ownersign/>}/> 
       <Route path="/homead" element={<Homead/>}/>
       <Route path="/view" element={<Viewitem/>}/>
-     
       <Route path="/add" element={<Owneradd/>}/>
+      <Route path="/update" element={<Ownerupdate/>}/>
+     
     </Routes>
     </BrowserRouter>
     </>

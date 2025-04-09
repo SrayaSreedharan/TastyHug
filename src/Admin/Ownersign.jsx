@@ -57,7 +57,9 @@ const Ownersign = () => {
             e.preventDefault()
             axios.post("https://reactecomapi.onrender.com/owner/ownersignup",signup).then((response)=>{
               console.log(response)
+              localStorage.setItem("loginId",response.data.owner.loginId)
               toast.success('sginup successfull')
+             
               navigate('/login')
         
             }).catch((error)=>{
