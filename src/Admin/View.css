@@ -12,6 +12,9 @@
 .fm{
    margin-left: 300px;
 }
+input{
+    gap: 20px;
+}
 @media only screen and (max-width:600px){
     .add{
         display: flex;

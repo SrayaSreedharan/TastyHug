@@ -32,7 +32,6 @@ const Viewitem = () => {
   }
   return (
     <>
-     <div className='grey' style={{backgroundColor:'lightgray',height:'740px'}}>
     <div className='add' style={{display:'flex',gap:'20px'}} >
     {data.length>0?(<>
     {data.map((item)=>(
@@ -70,18 +69,16 @@ const Viewitem = () => {
            </Card.Text>
            <Button className='bttn' type='submit' onClick={()=>buttonClick(item._id)} >DELETE</Button>
          </Card.Body>
-         
        </Card>  
     )
     )}
     </>)
 :(
   <>
-<h2 style={{color:'red',fontFamily:'cursive',display:'flex',justifyContent:'center',alignItems:'center',alignContent:'center'}}>Add Items is Empty.Please Add</h2> 
+<h2 style={{color:'red',fontFamily:'cursive',display:'flex',justifyContent:'center',alignItems:'center',alignContent:'center'}}>Items is Empty.Please Add</h2> 
   </>
 )      
     }
-    </div>
     </div>
     </>
   )

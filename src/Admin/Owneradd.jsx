@@ -90,7 +90,7 @@ const Owneradd = () => {
   return (
     <>
     <div style={{backgroundColor:'lightgray',height:'740px',marginTop:'-100px'}}>
-        <h6 style={{marginTop:'100px',marginLeft:'30px',padding:"20px"}}>ITEM DETAILS</h6>{<br></br>}
+        <h6 style={{marginTop:'100px',marginLeft:'30px',padding:"20px",textAlign:'center'}}>ITEM DETAILS</h6>{<br></br>}
         <form className='fm' style={{gap:"15px"}}>
         <label style={{color:'red'}}>{error.image}<input className='imgfrm' type="file"  placeholder='Image' name='foodImage' onChange={fileChange} /></label>  
       <label style={{color:'red'}}>{error.name}<input type="text"  placeholder='Name' name='name' onChange={handleChange} /></label>
