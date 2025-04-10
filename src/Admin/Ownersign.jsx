@@ -58,15 +58,12 @@ const Ownersign = () => {
             axios.post("https://reactecomapi.onrender.com/owner/ownersignup",signup).then((response)=>{
               console.log(response)
               localStorage.setItem("loginId",response.data.owner.loginId)
-              toast.success('sginup successfull')
-             
-              navigate('/login')
-        
+              toast.success('signup successfull')
+              navigate('/homead')
             }).catch((error)=>{
               console.log(error)
               toast.error(error.response?.data?.message || "signup failed")
             })
-
           }
         
   return (
@@ -75,23 +72,18 @@ const Ownersign = () => {
       <Navbaru/>
     <Form  className='frm2'  style={{height:'480px',marginTop:'-10px'}}>
     <h1 style={{color:'black'}}>OWNER</h1>
-      
-      
     <div className='wrap2'>
       <Form.Label style={{color:'red'}}>{error.username}</Form.Label>
       <Form.Control className='inpt'  type="text" placeholder="Username"  name="username" onChange={handleChange} required/>
     </div>
-
     <div className='wrap2'>
       <Form.Label style={{color:'red'}}>{error.phone}</Form.Label>
       <Form.Control className='inpt' type="tel" placeholder="Phone"  name="phone" onChange={handleChange} required/>
     </div>
-
     <div className='wrap2'>
       <Form.Label style={{color:'red'}}>{error.email}</Form.Label>
       <Form.Control className='inpt' type="mail" placeholder="Email" name="email" onChange={handleChange} required/>
     </div>
-    
     <div className='wrap2'>
       <Form.Label style={{color:'red'}}>{error.name}</Form.Label>
       <Form.Control className='inpt' type="text" placeholder="Restaurant Name" name="restaurantName"  onChange={handleChange} required/>
@@ -100,8 +92,6 @@ const Ownersign = () => {
       <Form.Label style={{color:'red'}}>{error.name}</Form.Label>
       <Form.Control className='inpt' type="text" placeholder="Address" name="address"  onChange={handleChange} required/>
     </div>
-
-
     <div className='wrap2'>
       <Form.Label style={{color:'red'}}>{error.password}</Form.Label>
       <Form.Control  className='inpt' type="password" placeholder="Password"  name="password" onChange={handleChange} required/>

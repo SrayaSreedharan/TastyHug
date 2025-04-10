@@ -46,7 +46,6 @@ function App() {
       <Route path="/view" element={<Viewitem/>}/>
       <Route path="/add" element={<Owneradd/>}/>
       <Route path="/update" element={<Ownerupdate/>}/>
-     
     </Routes>
     </BrowserRouter>
     </>

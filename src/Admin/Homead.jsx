@@ -21,12 +21,12 @@ const Homead = () => {
       <h5 style={{padding:'5px',marginLeft:'1380px',marginTop:'-75px'}}><a href='/login'>Logout</a></h5>
     </h5>
     </div>
-    <div style={{height:'680px',width:'200px',backgroundColor:'black',color:'white'}}>{<br></br>}
-    <img src={image} style={{height:'90px',marginLeft:'50px'}}></img>
+    <div style={{height:'680px',width:'230px',backgroundColor:'black',color:'white'}}>{<br></br>}
+    <img src={image} style={{height:'90px',marginLeft:'60px'}}></img>
     <h5 style={{textAlign:'center'}}>SRAYA SREEDHARAN{<br></br>}Lollino Resturant</h5>{<br></br>}
-    <BiSolidDashboard /> <h6 style={{fontSize:'15px',marginLeft:'24px',marginTop:'-18px'}}>Dash Board</h6>
-    <IoAddCircleOutline /> <h6 style={{fontSize:'15px',marginLeft:'24px',marginTop:'-18px'}}><a href='/add'>Add Items</a></h6>
-    <CiViewList /> <h6 style={{fontSize:'15px',marginLeft:'24px',marginTop:'-18px'}} >< a href='/view'>View Items</a></h6>
+    <BiSolidDashboard style={{marginLeft:'30px'}} /> <h6 style={{fontSize:'15px',marginLeft:'50px',marginTop:'-18px'}}>Dash Board</h6>
+    <IoAddCircleOutline style={{marginLeft:'30px'}}  /> <h6 style={{fontSize:'15px',marginLeft:'50px',marginTop:'-18px'}}><a href='/add'>Add Items</a></h6>
+    <CiViewList style={{marginLeft:'30px'}}  /> <h6 style={{fontSize:'15px',marginLeft:'50px',marginTop:'-18px'}} >< a href='/view'>View Items</a></h6>
     </div>
     <div style={{height:'680px',width:'1400px',marginLeft:'150px',marginTop:'-730px'}}>
       <div style={{display:'flex',justifyContent:'center',gap:'20px'}}>

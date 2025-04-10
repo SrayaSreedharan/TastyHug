@@ -5,6 +5,7 @@ import axios from 'axios'
 import '../Admin/View.css'
 import Card from 'react-bootstrap/Card';
 import { Button } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 
 const Viewitem = () => {
   const[data,setData]=useState([])
@@ -31,12 +32,20 @@ const Viewitem = () => {
       console.log(error)
     })
   }
+
+const navigate=useNavigate()
+
+const handleSubmit=(id)=>{
+  localStorage.setItem("prdId",id)
+  navigate('/update')
+}
+
   return (
     <>
     <div className='add' style={{display:'flex',gap:'20px'}} >
     {data.length>0?(<>
     {data.map((item)=>(
-         <Card  style={{ width: '18rem',height:'560px',backgroundColor:'black',color:'white',marginTop:'50px'}}>
+         <Card  style={{ width: '18rem',height:'580px',backgroundColor:'black',color:'white',marginTop:'50px'}}>
          <Card.Img variant="top" src={item.foodImage} style={{height:'180px',width:'180px',marginLeft:'50px',padding:'20px'}}/>
          <Card.Body>
            <Card.Title></Card.Title>
@@ -57,6 +66,10 @@ const Viewitem = () => {
            {item.description}
            </Card.Text>
            <Card.Text>
+           IsVeg:
+           {item.isVeg}
+           </Card.Text>
+           <Card.Text>
            Name:
            {item.name}
            </Card.Text>
@@ -68,8 +81,8 @@ const Viewitem = () => {
            Price:
            {item.price}
            </Card.Text>
-           <Button className='bttn' type='submit' onClick={()=>buttonClick(item._id)} >DELETE</Button>
-           <Button   className='bttn' type='submit' href='/update' >UPDATE</Button>
+           <Button className='bttn' type='submit' onClick={()=>buttonClick(item._id)} style={{backgroundColor:'red',borderColor:'red',color:'white'}} >DELETE</Button>
+           <Button   className='bttn' type='submit'  onClick={()=>handleSubmit(item._id)}         style={{backgroundColor:'green',borderColor:'green',color:'white'}} >UPDATE</Button>
          </Card.Body>
        </Card>  
     )
