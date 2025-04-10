@@ -29,7 +29,7 @@ const Navbarwe = () => {
               type="search"
               placeholder="Search" style={{width:'200px',marginTop:'20px'}}
             />
-            <Button variant="outline-success" style={{color:'white',backgroundColor:'black',border:'none',height:'40px',marginLeft:'230px',marginTop:'-65px'}} href="/login">LOGOUT</Button>
+            <Button variant="outline-success" style={{color:'white',backgroundColor:'black',border:'none',height:'40px',marginLeft:'230px',marginTop:'-90px'}} href="/login">LOGOUT</Button>
           </Form>
         </Navbar.Collapse>
       </Container>

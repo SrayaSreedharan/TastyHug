@@ -97,31 +97,31 @@ const buttonClick=(e)=>{
        <form className='frmup'>
        <h3>Update Item Details</h3>
        <img src={update.foodImage} style={{height:'150px',width:'150px'}}></img>
-      <label>{error.foodImage}<input type="file" name='foodImage' onChange={fileChange}></input>
+      <label>{error.foodImage}<input type="file" name='foodImage' onChange={fileChange} style={{marginLeft:'120px'}}></input>
       </label>
-      <label>{error.name}Name:<input type="text" name='name' value={update.name} onChange={handleChange} />
+      <label>{error.name}<input type="text" name='name' placeholder='Name' value={update.name} onChange={handleChange} />
       </label>
-      <label>{error.description}Description:<input type="text" name='description' value={update.description} onChange={handleChange}/>
+      <label>{error.description}<input type="text" name='description' placeholder='Description'  value={update.description} onChange={handleChange}/>
       </label>
-      <label>{error.price}Price:<input type="number" name='price' value={update.price} onChange={handleChange}/>
-      </label>
+      <label>{error.price}<input type="number" name='price' placeholder='Price'  value={update.price} onChange={handleChange}/>
+      </label>{<br></br>}
       <label>{error.availability}Availability:
         True<input type="radio" value="true" checked={update.availability===true} onChange={handleChange}  name='availability' />
         False<input type="radio" value="false" checked={update.availability===false} onChange={handleChange}/>
       </label>
-      <label>{error.category}Categeory<input type="text" name='category' onChange={handleChange} value={update.category}/>
+      <label>{error.category}<input type="text" name='category' placeholder='Category' onChange={handleChange} value={update.category}/>
       </label>
       <label>{error.isVeg}Isveg:
-        True<input type="radio" value="true"  checked={update.isVeg===true} onChange={handleChange} name='isVeg'/>
+        True<input type="radio" value="true" checked={update.isVeg===true} onChange={handleChange} name='isVeg' />
         False<input type="radio" value="false" checked={update.isVeg===false}  onChange={handleChange} name='isVeg' />
       </label>
-      <label>{error.ingredients}Ingredient:<input type="text" name='ingredients' onChange={handleChange} value={update.ingredients}/>
+      <label>{error.ingredients}<input type="text" name='ingredients'  placeholder='Ingredients'  onChange={handleChange} value={update.ingredients}/>
       </label>
-      <label>{error.spiceLevel}Spicylevel:<input type="text" name='spiceLevel' onChange={handleChange} value={update.spiceLevel}/>
+      <label>{error.spiceLevel}<input type="text" name='spiceLevel' placeholder='Spicelevel'  onChange={handleChange} value={update.spiceLevel}/>
       </label>
-      <label>{error.time}Time:<input type="number" name='preparationTime' onChange={handleChange} value={update.preparationTime}/>
+      <label>{error.time}<input type="number" name='preparationTime' placeholder='preparation Time' onChange={handleChange} value={update.preparationTime}/>
      </label>{<br></br>}
-      <button type='submit' className='btn3' onClick={buttonClick}style={{backgroundColor:'green',borderColor:'green',color:'white'}}>Success</button>
+      <button className='upbtn' type='submit' onClick={buttonClick}style={{backgroundColor:'green',borderColor:'green',color:'white',width:'100px',height:'40px'}}>Success</button>
     </form>
     </div>
     </>

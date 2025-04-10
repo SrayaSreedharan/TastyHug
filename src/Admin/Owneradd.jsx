@@ -13,7 +13,6 @@ const Owneradd = () => {
     }
 
     const fileChange=(e)=>{
-        
         setItem({...item, foodImage:e.target.files[0]})
         console.log(item)
     }
@@ -45,16 +44,15 @@ const Owneradd = () => {
     if(!item.Ingredients){
         errorMessage.Ingredients="Enter Ingredients"
     }
-    if(!item.Spicylevel){
-        errorMessage.Spicylevel="Enter Spicylevel"
+    if(!item.spiceLevel){
+        errorMessage.spiceLevel="Enter Spicylevel"
     }
-    if(!item.time){
-        errorMessage.time="Enter time"
+    if(!item.preparationTime){
+        errorMessage.preparationTime="Enter time"
     }
   setError(errorMessage)
     return Object.keys(errorMessage).length===0
    }
-
 
    const formdata=new FormData()
    formdata.append("foodImage",item.foodImage)
@@ -65,8 +63,8 @@ const Owneradd = () => {
    formdata.append("isVeg",item.isVeg)
    formdata.append("availability",item.availability)
    formdata.append("Ingredients",item.Ingredients)
-   formdata.append("Spicylevel",item.Spicylevel)
-   formdata.append("time",item.time)
+   formdata.append("spiceLevel",item.spiceLevel)
+   formdata.append("preparationTime",item.preparationTime)
 
     const handleSubmit=(e)=>{
          if(!validate()){
@@ -85,12 +83,12 @@ const Owneradd = () => {
     
   return (
     <>
-    <div style={{backgroundColor:'lightgray',height:'740px',marginTop:'-100px'}}>
+    <div style={{backgroundColor:'lightgray',height:'840px',marginTop:'-100px'}}>
         <h6 style={{marginTop:'100px',marginLeft:'30px',padding:"20px"}}>ITEM DETAILS</h6>{<br></br>}
         <form className='fm' style={{gap:"15px"}}>
         <label style={{color:'red'}}>{error.image}<input className='imgfrm' type="file"  placeholder='Image' name='foodImage' onChange={fileChange} /></label>{<br></br>}
       <label style={{color:'red'}}>{error.name}<input type="text"  placeholder='Name' name='name' onChange={handleChange} /></label>
-      <label style={{color:'red'}}>{error.description}<input type="textArea"  placeholder='Description'  name='description' onChange={handleChange}/></label>
+      <label style={{color:'red'}}>{error.description}<input type="text"  placeholder='Description'  name='description' onChange={handleChange}/></label>
       <label style={{color:'red'}}>{error.price}<input type="number"  placeholder='Price' name='price' onChange={handleChange}/></label>
       <label >{error.availability}
         Availability:
@@ -102,9 +100,9 @@ const Owneradd = () => {
         True<input type="radio" value='true'  name='isVeg' onChange={handleChange}/>
       False<input type="radio" value='false'  name='isVeg' onChange={handleChange}/></label>
       <label style={{color:'red'}}>{error.Ingredients}<input type="text"  placeholder='Ingredients' name='Ingredients'  onChange={handleChange}/></label>
-      <label style={{color:'red'}}>{error.Spicylevel}<input type="text"  placeholder='Spicy level' name='Spicylevel'  onChange={handleChange}/></label>
-      <label style={{color:'red'}}>{error.time}<input type="time"  placeholder='preparation Time' name='time'  onChange={handleChange}/></label>{<br></br>}
-      <button type="submit" className='btn3' onClick={handleSubmit} >Add</button>
+      <label style={{color:'red'}}>{error.spiceLevel}<input type="text"  placeholder='Spicelevel' name='spiceLevel'  onChange={handleChange}/></label>
+      <label style={{color:'red'}}>{error.preparationTime}<input type="text"  placeholder='preparation Time' name='preparationTime'  onChange={handleChange}/></label>{<br></br>}
+      <button type="submit"className='addbtn'  onClick={handleSubmit} style={{backgroundColor:'black',color:'white',width:'100px',height:'40px'}}>Add</button>
     </form>
     </div>
     </>

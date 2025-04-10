@@ -4,15 +4,25 @@
     background-repeat: no-repeat;
     background-size: 100%  100%;
 }
+.row{
+    margin-left: 10px;
+}
+.card{
+    margin: 30px;
+}
 
 @media only screen and (max-width:600px){
     .main{
-        height: 1160px;
+        height: 5200px;
     }
-    .rows{
+    .row{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
+       
+    }
+    .card{
+        margin: 30px;
     }
 }

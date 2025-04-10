@@ -75,7 +75,6 @@ const Homead = () => {
         </Card.Text>
       </Card.Body>
     </Card>
-    
     </div>
     </div>
     </>

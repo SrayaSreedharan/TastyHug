@@ -43,7 +43,7 @@ const Home = () => {
     <div className='home3'>
         <img src={image5}  style={{width:"200px" ,height:"200px",marginTop:'190px',marginLeft:'-30px'}}/>
     </div>
-    <div className='hme'>
+    <div className='hme' >
     <div style={{marginLeft: '100px',marginTop: '60px',marginRight: '380px'}}>
         <h1 style={{color:'darkorange',marginLeft:'-50px'}}>Life Medicine</h1>
         <p style={{color:'white',textAlign:'justify'}}>Our nutritional needs change with different life stages. To be fit and healthy, it is important to take into account the extra demands placed on your body by these changes.</p>

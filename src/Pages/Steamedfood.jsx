@@ -22,10 +22,10 @@ const Steamedfood = () => {
     <>
     <div className='main'>
     <Navbarwe/>
-    <div className='rows'  style={{display:'flex',gap:'20px'}} >
+    <div className='row'  style={{display:'flex',gap:'20px'}} >
     {data.map((items)=>(
         <Card  style={{ width: '18rem',height:'560px',marginTop:'-30px',backgroundColor:'black',color:'white'}}>
-        <Card.Img variant="top" src={items.foodImage} />
+        <Card.Img variant="top" src={items.foodImage} style={{height:'150px',width:'150px',marginLeft:'50px',marginTop:'10px'}} />
         <Card.Body>
           <Card.Title></Card.Title>
           <Card.Text>

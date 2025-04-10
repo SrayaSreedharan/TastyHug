@@ -9,7 +9,8 @@
     justify-content: center;
     align-items: center;
 }
-.btn3{
+.btn4{
+    
     padding: 15px;
     border: none;
     color: white;
@@ -19,11 +20,11 @@
     width: 150px;
     font-size: 16px;
     margin-top: 30px;
-    margin-left: 100px;
+    margin-left: 120px;
 }
 .inpt2{
     display: flex;
-    margin-left: 40px;
+    margin-left: 50px;
     padding:20px;
     padding-left: 20px;
     border-radius: 0px;
@@ -33,7 +34,7 @@
     font-family: 'Poppins', sans-serif;
 }
 .container {
-    margin: 20px ;
+    margin: 10px ;
 }
 .container .cad .img-box {
     margin-left: 130px;
