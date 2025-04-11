@@ -40,7 +40,6 @@ const Login = () => {
         console.log(response)
         toast.success('successfully')
         localStorage.setItem("loginId",response.data.loginId)
-        // navigate('/homead') 
         const role=response.data.role
         if( role == 'owner' ){
           navigate('/homead') 

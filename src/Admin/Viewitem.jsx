@@ -82,7 +82,7 @@ const handleSubmit=(id)=>{
            {item.price}
            </Card.Text>
            <Button className='bttn' type='submit' onClick={()=>buttonClick(item._id)} style={{backgroundColor:'red',borderColor:'red',color:'white'}} >DELETE</Button>
-           <Button   className='bttn' type='submit'  onClick={()=>handleSubmit(item._id)}         style={{backgroundColor:'green',borderColor:'green',color:'white'}} >UPDATE</Button>
+           <Button className='bttn' type='submit'  onClick={()=>handleSubmit(item._id)} style={{backgroundColor:'green',borderColor:'green',color:'white'}} >UPDATE</Button>
          </Card.Body>
        </Card>  
     )

@@ -15,7 +15,6 @@ const Arabicfood = () => {
       }).catch((error)=>{
           console.log(error)
       })
-
   },[])
   return (
     <>

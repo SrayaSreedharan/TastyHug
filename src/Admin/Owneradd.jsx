@@ -84,9 +84,9 @@ const Owneradd = () => {
   return (
     <>
     <div style={{backgroundColor:'lightgray',height:'840px',marginTop:'-100px'}}>
-        <h6 style={{marginTop:'100px',marginLeft:'30px',padding:"20px"}}>ITEM DETAILS</h6>{<br></br>}
-        <form className='fm' style={{gap:"15px"}}>
-        <label style={{color:'red'}}>{error.image}<input className='imgfrm' type="file"  placeholder='Image' name='foodImage' onChange={fileChange} /></label>{<br></br>}
+      <h6 style={{marginTop:'100px',marginLeft:'30px',padding:"20px"}}>ITEM DETAILS</h6>{<br></br>}
+      <form className='fm' style={{gap:"15px"}}>
+      <label style={{color:'red'}}>{error.image}<input className='imgfrm' type="file"  placeholder='Image' name='foodImage' onChange={fileChange} /></label>{<br></br>}
       <label style={{color:'red'}}>{error.name}<input type="text"  placeholder='Name' name='name' onChange={handleChange} /></label>
       <label style={{color:'red'}}>{error.description}<input type="text"  placeholder='Description'  name='description' onChange={handleChange}/></label>
       <label style={{color:'red'}}>{error.price}<input type="number"  placeholder='Price' name='price' onChange={handleChange}/></label>
@@ -103,7 +103,7 @@ const Owneradd = () => {
       <label style={{color:'red'}}>{error.spiceLevel}<input type="text"  placeholder='Spicelevel' name='spiceLevel'  onChange={handleChange}/></label>
       <label style={{color:'red'}}>{error.preparationTime}<input type="text"  placeholder='preparation Time' name='preparationTime'  onChange={handleChange}/></label>{<br></br>}
       <button type="submit"className='addbtn'  onClick={handleSubmit} style={{backgroundColor:'black',color:'white',width:'100px',height:'40px'}}>Add</button>
-    </form>
+      </form>
     </div>
     </>
   )
