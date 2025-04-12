@@ -21,6 +21,7 @@ import Homead from './Admin/Homead';
 import Viewitem from './Admin/Viewitem';
 import Owneradd from './Admin/Owneradd';
 import Ownerupdate from './Admin/Ownerupdate';
+import Addcart from './Pages/Addcart';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
       <Route path="/view" element={<Viewitem/>}/>
       <Route path="/add" element={<Owneradd/>}/>
       <Route path="/update" element={<Ownerupdate/>}/>
+      <Route path="/addcart" element={<Addcart/>}/>
     </Routes>
     </BrowserRouter>
     </>

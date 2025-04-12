@@ -21,6 +21,7 @@ const Navbarwe = () => {
           >
             <Nav.Link href="/about" style={{color:'white',padding:'20px'}}>ABOUT</Nav.Link>
             <Nav.Link href="/weoffer" style={{color:'white',padding:'20px'}}>OUR MENU</Nav.Link>
+            <Nav.Link href="/addcart" style={{color:'white',padding:'20px'}}>ADD CART</Nav.Link>
             <Nav.Link href="/order" style={{color:'white',padding:'20px'}}> YOUR ORDERS</Nav.Link>
             <Nav.Link href="/contact" style={{color:'white',padding:'20px'}}>CONTACT US</Nav.Link>
             </Nav>

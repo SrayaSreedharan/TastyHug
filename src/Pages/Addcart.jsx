@@ -1,40 +1,21 @@
-import React from 'react'
-import { useState,useEffect } from 'react'
 import axios from 'axios'
-import Navbarwe from '../Compoents/Navbarwe'
-import '../Pages/Main.css'
+import React, { useState } from 'react'
 import  Card from 'react-bootstrap/Card'
 import { Button } from 'react-bootstrap'
 
+const Addcart = () => {
+    const[add,setAdd]=useState([])
 
-const Arabicfood = () => {
-  const[data,setData]=useState([])
-  useEffect(()=>{
-      axios.get("https://reactecomapi.onrender.com/foods/products").then((response)=>{
-          console.log(response)
-          setData(response.data)
-      }).catch((error)=>{
-          console.log(error)
-      })
-  },[])
-
-  const handleSubmit=(id)=>{
-    const prdId=id;
-    const loginId=localStorage.getItem("loginId")
-    axios.post(`https://reactecomapi.onrender.com/foods/addToCart/${loginId}`,{prdId}).then((response)=>{
-      console.log(response)
-      setData(response)
-  }).catch((error)=>{
-      console.log(error)
-  })
-  }
-  
+    const prdId=localStorage.getItem("prdId")
+    axios.post(`https://reactecomapi.onrender.com/foods/addToCart/${loginId}`,prdId).then((response)=>{
+        console.log(response)
+        setAdd(response)
+    }).catch((error)=>{
+        console.log(error)
+    })
   return (
-    <>
-    <div className='main'>
-    <Navbarwe/>
-    <div className='row' style={{display:'flex',gap:'20px'}} >
-    {data.map((items)=>(
+    <div>
+        {add.map((items)=>(
          <Card  style={{ width: '18rem',height:'560px',marginTop:'-30px',backgroundColor:'black',color:'white'}}>
          <Card.Img variant="top" src={items.foodImage} style={{height:'150px',width:'150px',marginLeft:'50px',marginTop:'10px'}}/>
          <Card.Body>
@@ -67,14 +48,14 @@ const Arabicfood = () => {
            Price
            {items.price}
            </Card.Text>
-           <Button type='submit'className='btn2'  style={{backgroundColor:'orangered',width:'150px',marginLeft:'40px',marginTop:'-10px'}} onClick={()=>handleSubmit(items._id)} >ADD CART</Button>
+           <Button type='submit'className='btn2'  style={{backgroundColor:'orangered',width:'150px',marginLeft:'40px',marginTop:'-10px'}}>jjj</Button>
          </Card.Body>
        </Card> 
     )
     )}
     </div>
-    </div>
-    </>
   )
+
 }
-export default Arabicfood
+
+export default Addcart
