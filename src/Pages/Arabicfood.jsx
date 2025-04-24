@@ -19,11 +19,11 @@ const Arabicfood = () => {
   },[])
 
   const handleSubmit=(id)=>{
-    const prdId=id;
+    const productId=id;
+    
     const loginId=localStorage.getItem("loginId")
-    axios.post(`https://reactecomapi.onrender.com/foods/addToCart/${loginId}`,{prdId}).then((response)=>{
+    axios.post(`https://reactecomapi.onrender.com/foods/addtoCart/${loginId}`,{productId}).then((response)=>{
       console.log(response)
-      setData(response)
   }).catch((error)=>{
       console.log(error)
   })

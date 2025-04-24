@@ -10,13 +10,23 @@ const Seafood = () => {
  const[data,setData]=useState([])
    useEffect(()=>{
        axios.get("https://reactecomapi.onrender.com/foods/products").then((response)=>{
-           console.log(response)
-           setData(response.data)
+        console.log(response)
+        setData(response.data)
        }).catch((error)=>{
            console.log(error)
        })
- 
    },[])
+
+   const handleSubmit=(id)=>{
+    const productId=id;
+    const loginId=localStorage.getItem("loginId")
+    axios.post(`https://reactecomapi.onrender.com/foods/addtoCart/${loginId}`,{productId}).then((response)=>{
+      console.log(response)
+      }).catch((error)=>{
+        console.log(error)
+      })
+  }
+  
    return (
      <>
      <div className='main'>
@@ -55,7 +65,7 @@ const Seafood = () => {
             Price
             {items.price}
             </Card.Text>
-            <Button type='submit'className='btn2'  style={{backgroundColor:'orangered',width:'150px',marginLeft:'40px',marginTop:'-10px'}} href='/pay' >ORDER NOW</Button>
+           <Button type='submit'className='btn2'  style={{backgroundColor:'orangered',width:'150px',marginLeft:'40px',marginTop:'-10px'}} onClick={()=>handleSubmit(items._id)} >ADD CART</Button>
           </Card.Body>
         </Card> 
      )
