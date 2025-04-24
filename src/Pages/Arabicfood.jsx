@@ -20,7 +20,6 @@ const Arabicfood = () => {
 
   const handleSubmit=(id)=>{
     const productId=id;
-    
     const loginId=localStorage.getItem("loginId")
     axios.post(`https://reactecomapi.onrender.com/foods/addtoCart/${loginId}`,{productId}).then((response)=>{
       console.log(response)

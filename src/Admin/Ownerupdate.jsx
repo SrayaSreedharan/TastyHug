@@ -65,7 +65,6 @@ const Ownerupdate = () => {
 
 const buttonClick=(e)=>{
     e.preventDefault()
-
   if(!validate()){
           console.log("error")     
   }

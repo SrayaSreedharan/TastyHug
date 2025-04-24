@@ -16,7 +16,6 @@ const Addcart = () => {
       }).catch((error)=>{
         console.log(error)
       })
-
     },[])
 
     const buttonclick=(id)=>{
@@ -25,10 +24,13 @@ const Addcart = () => {
       const loginId=localStorage.getItem("loginId")
       axios.delete(`https://reactecomapi.onrender.com/foods/deleteFromCart/${loginId}/${productId}`).then((response)=>{
         console.log(response)
+        const filtered= data.filter((item)=>{
+          return item._id !== productId
+        })
+        setData(filtered)
       }).catch((error)=>{
         console.log(error)
       })
-      
     }
   return (
     <div className='main'>
@@ -69,7 +71,6 @@ const Addcart = () => {
            </Card.Text>
            <Button type='submit'className='btn2'  style={{backgroundColor:'orangered',width:'100px',marginTop:'-10px'}}>ORDER</Button>
            <Button type='submit'className='btn2'  style={{backgroundColor:'red',width:'100px',marginLeft:'20px',marginTop:'-10px',color:'white'}} onClick={()=>buttonclick(items._id)} >DELETE</Button>
-
          </Card.Body>
        </Card> 
     )
@@ -77,7 +78,5 @@ const Addcart = () => {
     </div>
     </div>
   )
-
 }
-
 export default Addcart
