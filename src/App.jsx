@@ -13,7 +13,6 @@ import Italianfood from './Pages/Italianfood';
 import Seafood from './Pages/Seafood';
 import Vegitem from './Pages/Vegitem';
 import Payment from './Pages/Payment';
-import Order from './Pages/Order';
 import About from './Pages/About';
 import Contactus from './Pages/Contactus';
 import Ownersign from './Admin/Ownersign';
@@ -22,6 +21,7 @@ import Viewitem from './Admin/Viewitem';
 import Owneradd from './Admin/Owneradd';
 import Ownerupdate from './Admin/Ownerupdate';
 import Addcart from './Pages/Addcart';
+import Orders from './Pages/Orders';
 
 function App() {
   return (
@@ -39,7 +39,7 @@ function App() {
       <Route path="/seafood" element={<Seafood/>}/> 
       <Route path="/veg" element={<Vegitem/>}/> 
       <Route path="/pay" element={<Payment/>}/>
-      <Route path="/order" element={<Order/>}/> 
+      {/* <Route path="/order" element={<Order/>}/>  */}
       <Route path="/about" element={<About/>}/> 
       <Route path="/contact" element={<Contactus/>}/> 
       <Route path="/owner" element={<Ownersign/>}/> 
@@ -48,6 +48,7 @@ function App() {
       <Route path="/add" element={<Owneradd/>}/>
       <Route path="/update" element={<Ownerupdate/>}/>
       <Route path="/addcart" element={<Addcart/>}/>
+      <Route path="/order" element={<Orders/>}/>
     </Routes>
     </BrowserRouter>
     </>

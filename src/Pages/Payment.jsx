@@ -3,8 +3,19 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import '../Pages/Payment.css'
 import imge from '../Pages/pay2.png'
+import axios from 'axios';
 
 const Payment = () => {
+
+  const handleSubmit=()=>{
+    const loginId=localStorage.getItem('loginId')
+    axios.post(`https://reactecomapi.onrender.com/foods/placeOrder/${loginId}`).then((response)=>{
+      console.log(response)
+      alert("your order placed")
+    }).catch((error)=>{
+      console.log(error)
+    })
+  }
 
   return (
     <>   
@@ -32,7 +43,7 @@ const Payment = () => {
       <Form.Control  className='inpt2' type="number" placeholder="CARD NUMBER"  name='number' style={{marginTop:'-20px'}}  required/></div>
       <div><Form.Label></Form.Label>
       <Form.Control  className='inpt2' type="date" placeholder="EXPIRY DATE"  name='number'  style={{marginTop:'-20px'}}  required/></div>
-    <Button  className='btn4' type="submit">PAY</Button>
+    <Button  className='btn4' type="submit" onClick={handleSubmit}>PAY</Button>
   </div>
   </div>
   </div>
