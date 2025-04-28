@@ -39,7 +39,6 @@ function App() {
       <Route path="/seafood" element={<Seafood/>}/> 
       <Route path="/veg" element={<Vegitem/>}/> 
       <Route path="/pay" element={<Payment/>}/>
-      {/* <Route path="/order" element={<Order/>}/>  */}
       <Route path="/about" element={<About/>}/> 
       <Route path="/contact" element={<Contactus/>}/> 
       <Route path="/owner" element={<Ownersign/>}/> 
